@@ -1,0 +1,214 @@
+#pragma experiment("BRIDGE_CONNECT")
+import ElectricPower
+import can_bridge_by_name
+import Resistor
+import Capacitor
+import Diode
+import I2C
+import Inductor
+
+from "sense.ato" import Sense
+from "parts/parts.ato" import AO3400A, C_82uF, C_1uF, C_4_7uF, R_2_94, R_10, BQ25756E, R_50k, R_10k, R_5_9k, R_30k, R_5_23k, C_470nF, L_10uH
+
+# TODO: Don't forget to check polarity of caps. 50/50 chance on each.
+#
+
+module Charger:
+    package = new BQ25756E
+
+    signal vbus
+    signal gnd
+    signal vsys
+
+    i2c = new I2C
+
+    # POWER INPUT
+    sense_bus = new Sense
+    sense_bus.pos ~ vbus
+    # sense_bus.neg ~ connected to q1 below
+    sense_bus.sense_p ~ package.ACP
+    sense_bus.sense_n ~ package.ACN
+    sense_bus.gnd ~ gnd
+
+    # INUPT CAPACITANCE
+    # ... design for worst case ripple...
+    # Using ~80uF caps as shown in diagrams. 82uF is more available.
+    # Split capacitance evenly either side of sense resistor
+    c_ac1 = new C_82uF
+    vbus ~> c_ac1 ~> gnd
+
+    c_ac2 = new C_82uF
+    sense_bus.neg ~> c_ac2 ~> gnd
+
+    c_ac3 = new C_1uF
+    vbus ~> c_ac3 ~> gnd
+    vbus ~ package.VAC
+
+    # AC DAMPING CAP
+    # I've copied this from the solar example, but it isn't mentioned
+    # anywhere. It seems to match the design of a damping arrangement
+    # I saw elsewhere, but the capacitance at 100uF seems very high
+    # for that. I'm rounding down to 82uF for BOM.
+    # The original 2.4ohm is boosted to 2.9 to compensate. (Assuming RC=f)
+    c_damp = new C_82uF
+    r_damp = new R_2_94
+    vbus ~> r_damp ~> c_damp ~> gnd
+
+    # Configure limits for input voltage. Currently default 4.2V - 36V.
+    # ACUV (undervoltage) uses threshold of 1.1V
+    # ACOV (overvolatge) uses threshold of 1.2V
+    # Use divider stack from input, with 1000kohm at top.
+    vbus ~ package.ACUV
+    gnd ~ package.ACOV
+
+
+    # INDUCTOR H-BRIDGE
+    # Solar charging design suggests 60V, 3.1mohm AONS66614
+    # USB-PD design suggests 80V, 6.2mohm SiR880BDP
+    # AO3400A is 30V, 48mohm at 2.5V
+    q1 = new AO3400A
+    q2 = new AO3400A
+    q3 = new AO3400A
+    q4 = new AO3400A
+
+    q1.D ~ sense_bus.neg
+    q1.G ~ package.HIDRV1
+    q1.S ~ package.SW1
+
+    q2.D ~ package.SW1
+    q2.G ~ package.LODRV1
+    q2.S ~ gnd
+
+    q3.D ~ package.SW2
+    q3.G ~ package.LODRV2
+    q3.S ~ gnd
+
+    # INDUCTOR
+    # Isat > Il + 0.5 Iripple
+    # Iripple will be less than 0.5 Il
+    # Il limited to 3.42A based on power supply design
+    # Isat >= 5A
+    # Solar charging design suggests 10uH, 12mohm. IHLP6767GZ-01
+    # USB-PD design suggests 10uH, 19mohm, CMLB135T-100MS
+    l = new L_10uH
+    package.SW1 ~> l ~> package.SW2
+
+    # q4.D connected to sense_system bellow
+    q4.G ~ package.HIDRV2
+    q4.S ~ package.SW2
+
+    # BOOTSTRAP SUPPORT
+    c_inductor_1 = new Capacitor
+    d_inductor_1 = new Diode
+    package.DRV_SUP ~> d_inductor_1 ~> package.BTST1
+    package.BTST1 ~> c_inductor_1 ~> package.SW1
+
+    c_inductor_2 = new Capacitor
+    d_inductor_2 = new Diode
+    package.DRV_SUP ~> d_inductor_2 ~> package.BTST2
+    package.BTST2 ~> c_inductor_2 ~> package.SW2
+
+    # VSYS
+    sense_system = new Sense
+    sense_system.pos ~ q4.D
+    sense_system.neg ~ vsys
+    sense_system.sense_p ~ package.SRP
+    sense_system.sense_n ~ package.SRN
+    sense_system.gnd ~ gnd
+
+    # OUTPUT CAPACITANCE
+    # Primarily needed for forward boost or reverse buck
+    # ESR sensitive. Use combination of bulk and ceramic.
+    # Place ceramic close to switching half-bridge.
+    # Distribute evenly either side of Rsense
+    c_sys_1 = new C_82uF
+    q4.D ~> c_sys_1 ~> gnd
+
+    c_sys_2 = new C_82uF
+    vsys ~> c_sys_2 ~> gnd
+
+    c_sys_3 = new C_1uF
+    q4.D ~> c_sys_3 ~> gnd
+
+    # VOLTAGE FEEDBACK
+    # rbot = rtop * (vfb/(vbatreg-vfb))+rfbg
+    # vfb default is 1.536V, but can be changed in software
+    # vbatreg is desired battery regulation target. 21.6V - err 24.6
+    # rfbg is internal FBG pull-down resistor. 33ohm
+    # rtop = 249kohm? Is this required? It looks like a selection. Choose big.
+    # rbot = 249kohm * (1.536/(21.6-1.536))+33
+    # rbot = 19.095, round to 19.1kohm
+    # Or rather, 16.62, round to 16.5
+    # use 0.1% resistors
+    r_fb_top = new Resistor
+    r_fb_top.resistance = 249kohm +/- 0.1%
+    r_fb_top.package = "0603"
+    r_fb_bot = new Resistor
+    r_fb_bot.resistance = 16.5kohm +/- 0.1%
+
+    vsys ~> r_fb_top ~> package.FB
+    package.FB ~> r_fb_bot ~> package.FBG
+
+    # REGN onbaord regulator output
+    c_regn = new C_4_7uF
+    package.REGN ~> c_regn ~> gnd
+
+    # GATE DRIVE
+    # Power gate drive with filtered power from onboard regulator
+    r_drv = new R_10
+    c_drv = new C_4_7uF
+    package.DRV_SUP ~> r_drv ~> package.REGN
+    package.DRV_SUP ~> c_drv ~> gnd
+
+    # VARIOUS
+    i2c.sda.line ~ package.SDA
+    i2c.scl.line ~ package.SCL
+
+    package.nCE ~ gnd
+    package.PGND ~ gnd
+    package.EP ~ gnd
+
+    # SWITCHING FREQUENCY
+    # Rfsw (kohm)   |  Fsw (kHz)
+    #    200        |     200
+    #    133        |     250
+    #    100        |     300
+    #     80        |     350
+    #   66.7        |     400
+    #   57.1        |     450
+    #     50        |     500
+    #   44.4        |     550
+    #     40        |     600
+    r_fsw_sync = new R_50k
+    package.FSW_SYNC ~> r_fsw_sync ~> gnd
+
+    r_ichg = new R_10k
+    package.ICHG ~> r_ichg ~> gnd
+
+    # INPUT CURRENT LIMIT
+    # Iac_max = Kilim / Rilim_hiz
+    # Kilim depends on sense resistor. 50 A*kohm for 2mohm, 20 A*kohm for 5mohm
+    # For 65W 19V supply, 3.42A R should be at least 5.85 kohm
+    r_ilim_hiz = new R_5_9k
+    package.ILIM_HIZ ~> r_ilim_hiz ~> gnd
+
+
+    # THERMISTOR
+    # BQ25756E section 8.3.4.7
+    # Set the temperature stuff for things. JEITA and battery pack charging stuff.
+    # For 103AT NTC thermistor
+    # RT2 = (RTHcold*RTHhot*(1/VT1-1/VT5))/(RTHhot*(1/vt5-1)-RTHcold*(1/VT1-1))
+    # RT1 = (1/VT1-1)/(1/RT2 + 1/RTHcold)
+    # "Select 0°C to 60°C range for Li-ion or Li-polymer battery:"
+    # RTHT1 = 27.28kohm
+    # RTHT5 = 3.02kohm
+    # RT1 = 5.24kohm
+    # RT2 = 30.31kohm
+    # These numbers are deeply unrealistic, but no further guidance is offered.
+    # Just guessing 30k and 5.23k
+
+    r_ts_top = new R_5_23k
+    r_ts_bot = new R_30k
+
+    package.REGN ~> r_ts_top ~> package.TS
+    package.TS ~> r_ts_bot ~> gnd

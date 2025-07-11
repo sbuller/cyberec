@@ -1,0 +1,16 @@
+"""Brand new atopile project!"""
+#pragma experiment("BRIDGE_CONNECT")
+import ElectricPower
+import Resistor
+
+from "pack.ato" import Pack
+from "charger.ato" import Charger
+
+module App:
+    signal gnd
+
+    #pack = new Pack
+    charger = new Charger
+
+    charger.gnd ~ gnd
+    #pack.gnd ~ gnd

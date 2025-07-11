@@ -1,0 +1,18 @@
+#pragma experiment("TRAITS")
+import has_datasheet_defined
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+import is_auto_generated
+import can_bridge_by_name
+
+component Ymin_VKME2102C820MV_package:
+
+    trait is_atomic_part<manufacturer="Ymin", partnumber="VKME2102C820MV", footprint="CAP-SMD_BD10.0-L10.3-W10.3-FD.kicad_mod", symbol="VKME2102C820MV.kicad_sym", model="CAP-SMD_BD10.0-L10.3-W10.3-FD.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C487475", manufacturer="Ymin", partno="VKME2102C820MV">
+    trait has_designator_prefix<prefix="C">
+    trait has_datasheet_defined<datasheet="https://lcsc.com/datasheet/lcsc_datasheet_2304140030_Ymin-VKME2102C820MV_C487475.pdf">
+
+    # pins
+    pin 1
+    pin 2

@@ -1,0 +1,37 @@
+#pragma experiment("BRIDGE_CONNECT")
+#pragma experiment("TRAITS")
+import Resistor
+import Capacitor
+import can_bridge_by_name
+
+from "parts/parts.ato" import R_10, C_470nF, C_100nF
+
+module Sense:
+	signal gnd
+	signal pos
+	signal neg
+	signal sense_p
+	signal sense_n
+
+	sense_resistance = 5mohm +/- 1%
+
+	r_sense = new Resistor
+	r_sense.resistance = sense_resistance
+
+	r_pos = new R_10
+	r_neg = new R_10
+
+	c_diff = new C_470nF
+
+	c_pos = new C_100nF
+	c_neg = new C_100nF
+
+	sense_p ~> c_diff ~> sense_n
+	sense_p ~> c_pos ~> gnd
+	sense_n ~> c_neg ~> gnd
+
+	sense_p ~> r_pos ~> pos
+	sense_n ~> r_neg ~> neg
+
+	pos ~> r_sense ~> neg
+	trait can_bridge_by_name<input_name="pos", output_name="neg">

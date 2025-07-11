@@ -1,0 +1,24 @@
+#pragma experiment("TRAITS")
+import has_datasheet_defined
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+import is_auto_generated
+import NFET
+
+component Alpha___Omega_Semicon_AO3400A_package:
+    """AO3400A"""
+
+    # This trait marks this file as auto-generated
+    # If you want to manually change it, remove the trait
+    trait is_auto_generated<system="ato_part", source="easyeda:C20917", date="2025-07-09T19:13:57.366067+00:00", checksum="c62dbcb8b7dc25c9dd07dc9c7444001acc6c3666d99f41b2535c24dc6b6fc105">
+
+    trait is_atomic_part<manufacturer="Alpha & Omega Semicon", partnumber="AO3400A", footprint="SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR.kicad_mod", symbol="AO3400A.kicad_sym", model="SOT-23-3P_L2.9-W1.3-H1.0-LS2.4-P0.95.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C20917", manufacturer="Alpha & Omega Semicon", partno="AO3400A">
+    trait has_designator_prefix<prefix="Q">
+    trait has_datasheet_defined<datasheet="https://lcsc.com/datasheet/lcsc_datasheet_2410121838_Alpha---Omega-Semicon-AO3400A_C20917.pdf">
+
+    # pins
+    signal D ~ pin 3
+    signal G ~ pin 1
+    signal S ~ pin 2
