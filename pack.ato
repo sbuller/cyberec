@@ -1,0 +1,65 @@
+#pragma experiment("BRIDGE_CONNECT")
+import ElectricPower
+import can_bridge_by_name
+import Resistor
+import Capacitor
+
+from "sense.ato" import Sense
+
+from "parts/XT30PW_M/XT30PW_M.ato" import XT30M
+from "parts/XT30PW_F/XT30PW_F.ato" import XT30F
+from "parts/JST_Sales_America_B4B_XH_A_LF__SN/JST_Sales_America_B4B_XH_A_LF__SN.ato" import JST_Sales_America_B4B_XH_A_LF__SN_package
+from "parts/Texas_Instruments_BQ40Z80RSMR/Texas_Instruments_BQ40Z80RSMR.ato" import Texas_Instruments_BQ40Z80RSMR_package
+
+from "parts/parts.ato" import R_10, C_100nF
+
+module Pack:
+    signal gnd
+    signal vbat
+    signal vss
+    signal nbat
+    signal pgnd
+
+    bat1 = new XT30M
+    bat2 = new XT30M
+
+    bat1.power.gnd ~ nbat
+    bat1.power.vcc ~ bat2.power.gnd
+    bat2.power.vcc ~ vbat
+
+    bal1 = new JST_Sales_America_B4B_XH_A_LF__SN_package
+    bal2 = new JST_Sales_America_B4B_XH_A_LF__SN_package
+
+    bal1._4 ~ bal2._1
+    bal1._1 ~ vbat
+    bal2._4 ~ nbat
+
+    mon = new Texas_Instruments_BQ40Z80RSMR_package
+
+    # BALANCE LEADS
+    ## Resistors
+    bal_res = new R_10[6]
+    mon.VC1 ~> bal_res[0] ~> bal2._3
+    mon.VC2 ~> bal_res[1] ~> bal2._2
+    mon.VC3 ~> bal_res[2] ~> bal2._1
+    mon.VC4 ~> bal_res[3] ~> bal1._4
+    mon.VC5 ~> bal_res[4] ~> bal1._3
+    mon.VC6 ~> bal_res[5] ~> bal1._2
+    ## Capacitors
+    bal_caps = new C_100nF[6]
+    gnd     ~> bal_caps[0] ~> mon.VC1
+    mon.VC1 ~> bal_caps[1] ~> mon.VC2
+    mon.VC2 ~> bal_caps[2] ~> mon.VC3
+    mon.VC3 ~> bal_caps[3] ~> mon.VC4
+    mon.VC4 ~> bal_caps[4] ~> mon.VC5
+    mon.VC5 ~> bal_caps[5] ~> mon.VC6
+
+    mon.VSS ~ vss
+    mon.SRP ~ vss
+
+    sense = new Sense
+    sense.differential_capacitance = 100pF
+    nbat ~> sense ~> pgnd
+    sense.sense_p ~ mon.SRP
+    sense.sense_n ~ mon.SRN
+

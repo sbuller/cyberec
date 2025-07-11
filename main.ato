@@ -9,8 +9,8 @@ from "charger.ato" import Charger
 module App:
     signal gnd
 
-    #pack = new Pack
+    pack = new Pack
     charger = new Charger
 
     charger.gnd ~ gnd
-    #pack.gnd ~ gnd
+    pack.gnd ~ gnd
