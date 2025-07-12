@@ -1,0 +1,22 @@
+#pragma experiment("TRAITS")
+import has_datasheet_defined
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+import is_auto_generated
+
+component Samsung_Electro_Mechanics_CL10B474KA8NNNC_package:
+    """470nF (474) ±10% 25V"""
+
+    # This trait marks this file as auto-generated
+    # If you want to manually change it, remove the trait
+    trait is_auto_generated<system="ato_part", source="easyeda:C1623", date="2025-07-12T02:26:20.638246+00:00", checksum="16dd262981e341ac90fd1776303f0284e87f1351c5ff7c2b0b1cf06d5adf9605">
+
+    trait is_atomic_part<manufacturer="Samsung Electro-Mechanics", partnumber="CL10B474KA8NNNC", footprint="C0603.kicad_mod", symbol="CL10B474KA8NNNC.kicad_sym", model="C0603_L1.6-W0.8-H0.8.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C1623", manufacturer="Samsung Electro-Mechanics", partno="CL10B474KA8NNNC">
+    trait has_designator_prefix<prefix="C">
+    trait has_datasheet_defined<datasheet="https://lcsc.com/datasheet/lcsc_datasheet_2304140030_Samsung-Electro-Mechanics-CL10B474KA8NNNC_C1623.pdf">
+
+    # pins
+    pin 1
+    pin 2

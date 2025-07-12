@@ -1,0 +1,20 @@
+#pragma experiment("TRAITS")
+import has_datasheet_defined
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+import is_auto_generated
+
+component RALEC_RTT032R94FTP_package:
+    # This trait marks this file as auto-generated
+    # If you want to manually change it, remove the trait
+    trait is_auto_generated<system="ato_part", source="easyeda:C166832", date="2025-07-12T01:02:51.307243+00:00", checksum="968e2ebfe5b2201206ab53b60cd187292627a434279a40fc37b506de27124c13">
+
+    trait is_atomic_part<manufacturer="RALEC", partnumber="RTT032R94FTP", footprint="R0603.kicad_mod", symbol="RTT032R94FTP.kicad_sym", model="R0603.STEP">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C166832", manufacturer="RALEC", partno="RTT032R94FTP">
+    trait has_designator_prefix<prefix="R">
+    trait has_datasheet_defined<datasheet="https://lcsc.com/datasheet/lcsc_datasheet_2411221110_RALEC-RTT032R94FTP_C166832.pdf">
+
+    # pins
+    pin 2
+    pin 1

@@ -7,134 +7,204 @@ import Capacitor
 import Resistor
 import ElectricPower
 import Inductor
+import Power
 
 from "parts/Texas_Instruments_BQ25756ERRVR/Texas_Instruments_BQ25756ERRVR.ato" import Texas_Instruments_BQ25756ERRVR_package
 from "parts/Alpha___Omega_Semicon_AO3400A/Alpha___Omega_Semicon_AO3400A.ato" import Alpha___Omega_Semicon_AO3400A_package
 from "parts/Ymin_VKME2102C820MV/Ymin_VKME2102C820MV.ato" import Ymin_VKME2102C820MV_package
 
 module BQ25756E from Texas_Instruments_BQ25756ERRVR_package:
-    pass
+	pass
 
 module AO3400A from NFET:
-    package = new Alpha___Omega_Semicon_AO3400A_package
-    signal D ~ package.D
-    signal G ~ package.G
-    signal S ~ package.S
+	package = new Alpha___Omega_Semicon_AO3400A_package
+	signal D ~ package.D
+	signal G ~ package.G
+	signal S ~ package.S
 
 module C_82uF from CapacitorElectrolytic:
-    trait has_designator_prefix<prefix="C">
-    package = new Ymin_VKME2102C820MV_package
-    capacitance = 82uF +/- 20%
-    max_voltage = 160V
+	trait has_designator_prefix<prefix="C">
+	package = new Ymin_VKME2102C820MV_package
+	capacitance = 82uF +/- 20%
+	max_voltage = 160V
 
-    signal pos ~ package._1
-    signal neg ~ package._2
+	signal pos ~ package._1
+	signal neg ~ package._2
 
-    trait can_bridge_by_name<input_name="pos", output_name="neg">
+	trait can_bridge_by_name<input_name="pos", output_name="neg">
 
 component C_1uF from Capacitor:
-    """50V 1uF X5R ±10% 0603"""
-    trait has_designator_prefix<prefix="C">
-    lcsc_id = "C15849"
-    package = "0603"
-    max_voltage = 50V
-    capacitance = 1uF +/- 10%
-    temperature_coefficient = "X5R"
-    signal p1 ~ pin 1
-    signal p2 ~ pin 2
+	"""50V 1uF X5R ±10% 0603"""
+	trait has_designator_prefix<prefix="C">
+	lcsc_id = "C15849"
+	package = "0603"
+	max_voltage = 50V
+	capacitance = 1uF +/- 10%
+	temperature_coefficient = "X5R"
+	signal p1 ~ pin 1
+	signal p2 ~ pin 2
 
 module C_4_7uF from Capacitor:
-    """16V 4.7uF X5R ±10% 0603 Multilayer Ceramic Capacitors"""
-    trait has_designator_prefix<prefix="C">
-    lcsc_id = "C19666"
-    package = "0603"
-    max_voltage = 16V
-    capacitance = 4.7uF +/- 10%
-    temperature_coefficient = "X5R"
-    signal p1 ~ pin 1
-    signal p2 ~ pin 2
+	"""16V 4.7uF X5R ±10% 0603 Multilayer Ceramic Capacitors"""
+	trait has_designator_prefix<prefix="C">
+	lcsc_id = "C19666"
+	package = "0603"
+	max_voltage = 16V
+	capacitance = 4.7uF +/- 10%
+	temperature_coefficient = "X5R"
+	signal p1 ~ pin 1
+	signal p2 ~ pin 2
 
 component R_2_94 from Resistor:
-    """100mW Thick Film Resistor 75V ±1% ±200ppm/℃ 2.94Ω 0603 Chip Resistor"""
-    trait has_designator_prefix<prefix="R">
-    package = "0603"
-    lcsc_id = "C166832"
-    resistance = 2.94ohm +/- 1%
-    max_power = 100mW
-    max_voltage = 75V
-    signal p1 ~ pin 1
-    signal p2 ~ pin 2
+	"""100mW Thick Film Resistor 75V ±1% ±200ppm/℃ 2.94Ω 0603 Chip Resistor"""
+	trait has_designator_prefix<prefix="R">
+	package = "0603"
+	lcsc_id = "C166832"
+	resistance = 2.94ohm +/- 1%
+	max_power = 100mW
+	max_voltage = 75V
+	signal p1 ~ pin 1
+	signal p2 ~ pin 2
 
 component R_10 from Resistor:
-    """100mW Thick Film Resistors 75V ±1% ±400ppm/℃ 10Ω 0603"""
-    trait has_designator_prefix<prefix="R">
-    package = "0603"
-    lcsc_id = "C22859"
-    resistance = 10ohm +/- 1%
-    max_voltage = 75V
-    max_power = 100mW
-    signal p1 ~ pin 1
-    signal p2 ~ pin 2
+	"""100mW Thick Film Resistors 75V ±1% ±400ppm/℃ 10Ω 0603"""
+	trait has_designator_prefix<prefix="R">
+	package = "0603"
+	lcsc_id = "C22859"
+	resistance = 10ohm +/- 1%
+	max_voltage = 75V
+	max_power = 100mW
+	signal p1 ~ pin 1
+	signal p2 ~ pin 2
 
 component R_50k from Resistor:
-    trait has_designator_prefix<prefix="R">
-    lcsc_id = "C861451"
-    package = "0603"
-    resistance = 50kohm +/- 0.1%
-    max_power = 100mW
-    signal p1 ~ pin 1
-    signal p2 ~ pin 2
+	trait has_designator_prefix<prefix="R">
+	lcsc_id = "C861451"
+	package = "0603"
+	resistance = 50kohm +/- 0.1%
+	max_power = 100mW
+	signal p1 ~ pin 1
+	signal p2 ~ pin 2
 
 component R_10k from Resistor:
-    trait has_designator_prefix<prefix="R">
-    lcsc_id = "C25804"
-    package = "0603"
-    resistance = 10kohm +/- 1%
-    signal p1 ~ pin 1
-    signal p2 ~ pin 2
+	trait has_designator_prefix<prefix="R">
+	lcsc_id = "C25804"
+	package = "0603"
+	resistance = 10kohm +/- 1%
+	signal p1 ~ pin 1
+	signal p2 ~ pin 2
 
 component R_5_9k from Resistor:
-    trait has_designator_prefix<prefix="R">
-    lcsc_id = "C23071"
-    package = "0603"
-    resistance = 5.9kohm +/- 1%
-    signal p1 ~ pin 1
-    signal p2 ~ pin 2
+	trait has_designator_prefix<prefix="R">
+	lcsc_id = "C23071"
+	package = "0603"
+	resistance = 5.9kohm +/- 1%
+	signal p1 ~ pin 1
+	signal p2 ~ pin 2
 
 component R_30k from Resistor:
-    trait has_designator_prefix<prefix="R">
-    lcsc_id = "C22984"
-    package = "0603"
-    resistance = 30kohm +/- 1%
-    signal p1 ~ pin 1
-    signal p2 ~ pin 2
+	trait has_designator_prefix<prefix="R">
+	lcsc_id = "C22984"
+	package = "0603"
+	resistance = 30kohm +/- 1%
+	signal p1 ~ pin 1
+	signal p2 ~ pin 2
 
 component R_5_23k from Resistor:
-    trait has_designator_prefix<prefix="R">
-    lcsc_id = "C23068"
-    package = "0603"
-    resistance = 5.23kohm +/- 1%
-    signal p1 ~ pin 1
-    signal p2 ~ pin 2
+	trait has_designator_prefix<prefix="R">
+	lcsc_id = "C23068"
+	package = "0603"
+	resistance = 5.23kohm +/- 1%
+	signal p1 ~ pin 1
+	signal p2 ~ pin 2
 
 component C_470nF from Capacitor:
-    trait has_designator_prefix<prefix="C">
-    lcsc_id = "C1623"
-    package = "0603"
-    capacitance = 470nF +/- 10%
-    signal p1 ~ pin 1
-    signal p2 ~ pin 2
+	trait has_designator_prefix<prefix="C">
+	lcsc_id = "C1623"
+	package = "0603"
+	capacitance = 470nF +/- 10%
+	signal p1 ~ pin 1
+	signal p2 ~ pin 2
 
 component C_100nF from Capacitor:
-    trait has_designator_prefix<prefix="C">
-    lcsc_id = "C14663"
-    package = "0603"
-    capacitance = 100nF +/- 10%
-    signal p1 ~ pin 1
-    signal p2 ~ pin 2
+	trait has_designator_prefix<prefix="C">
+	lcsc_id = "C14663"
+	package = "0603"
+	capacitance = 100nF +/- 10%
+	signal p1 ~ pin 1
+	signal p2 ~ pin 2
 
 component L_10uH from Inductor:
-    lcsc_id = "C22463843"
-    trait has_designator_prefix<prefix="L">
-    signal p1 ~ pin 1
-    signal p2 ~ pin 2
+	lcsc_id = "C22463843"
+	trait has_designator_prefix<prefix="L">
+	signal p1 ~ pin 1
+	signal p2 ~ pin 2
+
+component XT60PW_F:
+	"""Female XT60 (supplies power), with right angle pins."""
+	signal gnd ~ pin 1
+	signal vin ~ pin 2
+	power = new ElectricPower
+	power.vcc ~ vin
+	power.gnd ~ gnd
+
+	lcsc_id = "C428722"
+	designator_prefix = "J"
+
+component XT60PW_M:
+	"""Male XT60 (receives power), with right angle pins."""
+	signal gnd ~ pin 1
+	signal vin ~ pin 2
+	power =  new ElectricPower
+	power.vcc ~ vin
+	power.gnd ~ gnd
+
+	lcsc_id = "C98732"
+	designator_prefix = "J"
+
+component JST_B4B_XH:
+	"""Wire to board connector used by LiPo battery leads"""
+	signal gnd ~ pin 4
+	signal c1 ~ pin 3
+	signal c2 ~ pin 2
+	signal c3 ~ pin 1
+
+	lcsc_id = "C144395"
+	designator_prefix = "J"
+
+component BQ40Z80:
+	"""Magical Battery Fuel Gauge of life and happiness"""
+
+	lcsc_id = "C882850"
+
+	# pins
+	signal BAT ~ pin 30
+	signal CB7EN_PDSG_GPIO ~ pin 16
+	signal CHG ~ pin 29
+	signal DSG ~ pin 26
+	signal EP ~ pin 33
+	signal FUSE ~ pin 23
+	signal LEDCNTLA_PDSG_GPIO ~ pin 20
+	signal LEDCNTLB_GPIO ~ pin 21
+	signal LEDCNTLC_GPIO ~ pin 22
+	signal PACK ~ pin 25
+	signal PBI ~ pin 31
+	signal PCHG ~ pin 28
+	signal SMBC ~ pin 19
+	signal SMBD ~ pin 18
+	signal SRN ~ pin 6
+	signal SRP ~ pin 8
+	signal TS1 ~ pin 10
+	signal TS2 ~ pin 11
+	signal VC1 ~ pin 5
+	signal VC2 ~ pin 4
+	signal VC3 ~ pin 3
+	signal VC4 ~ pin 2
+	signal VC5 ~ pin 1
+	signal VC6 ~ pin 32
+	signal VC7EN_nDISP_GPIO ~ pin 15
+	signal VC7SENSE_TS3_ADCIN1_GPIO ~ pin 12
+	signal VCC ~ pin 24
+	signal VSS ~ pin 9
+	signal nDISP_TS4_ADCIN2_GPIO ~ pin 13
+	signal nPRES_nSHUTDN_nDISP_PDSG_GPIO ~ pin 17

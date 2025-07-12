@@ -1,0 +1,20 @@
+#pragma experiment("TRAITS")
+import has_datasheet_defined
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+import is_auto_generated
+
+component TA_I_Tech_RLM25FEER005_package:
+    # This trait marks this file as auto-generated
+    # If you want to manually change it, remove the trait
+    trait is_auto_generated<system="ato_part", source="easyeda:C185817", date="2025-07-12T01:03:33.733893+00:00", checksum="cc306172e34ccb5691938372c50cd341080b4d53d87fab9776abc06abb7babbf">
+
+    trait is_atomic_part<manufacturer="TA-I Tech", partnumber="RLM25FEER005", footprint="R2512.kicad_mod", symbol="RLM25FEER005.kicad_sym", model="R2512_L6.3-W3.2-H0.6.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C185817", manufacturer="TA-I Tech", partno="RLM25FEER005">
+    trait has_designator_prefix<prefix="R">
+    trait has_datasheet_defined<datasheet="https://lcsc.com/datasheet/lcsc_datasheet_2410121236_TA-I-Tech-RLM25FEER005_C185817.pdf">
+
+    # pins
+    pin 2
+    pin 1

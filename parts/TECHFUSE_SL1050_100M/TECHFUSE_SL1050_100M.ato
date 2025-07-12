@@ -1,0 +1,18 @@
+#pragma experiment("TRAITS")
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+import is_auto_generated
+
+component TECHFUSE_SL1050_100M_package:
+    # This trait marks this file as auto-generated
+    # If you want to manually change it, remove the trait
+    trait is_auto_generated<system="ato_part", source="easyeda:C22463843", date="2025-07-12T01:02:49.990062+00:00", checksum="9cb09428a5fe610d71db02229ac68de6d7cadd910fff76a378894cecdeef2900">
+
+    trait is_atomic_part<manufacturer="TECHFUSE", partnumber="SL1050-100M", footprint="IND-SMD_L11.0-W10.5_SL1050-330M.kicad_mod", symbol="SL1050-100M.kicad_sym", model="IND-SMD_L11.0-W10.5_SL1050-330M.STEP">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C22463843", manufacturer="TECHFUSE", partno="SL1050-100M">
+    trait has_designator_prefix<prefix="L">
+
+    # pins
+    pin 2
+    pin 1
