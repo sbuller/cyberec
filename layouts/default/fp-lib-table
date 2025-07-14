@@ -231,4 +231,11 @@
         (options "")
         (descr "atopile: part lib: XFCN_PZ254V_11_02P")
     )
+    (lib
+        (name "Samsung_Electro_Mechanics_CL05A225MQ5NSNC")
+        (type "KiCad")
+        (uri "${KIPRJMOD}/../../parts/Samsung_Electro_Mechanics_CL05A225MQ5NSNC")
+        (options "")
+        (descr "atopile: part lib: Samsung_Electro_Mechanics_CL05A225MQ5NSNC")
+    )
 )

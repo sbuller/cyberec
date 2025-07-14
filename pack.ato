@@ -26,7 +26,7 @@ module Pack:
 	bal2 = new JST_B4B_XH
 
 	bal1.gnd ~ gnd
-	bal2.c3 ~ vbat
+	#bal2.c3 ~ vbat
 
 	mon = new BQ40Z80
 
@@ -130,3 +130,12 @@ module Pack:
 	mon.TS1 ~> TS1 ~> gnd
 	mon.TS2 ~> TS2 ~> gnd
 
+	# nPRES is used to signal that the system is present
+	# nSHUTDN indicates to shutdown pack using the same signal?
+	# SMBC
+	# SMBD
+
+	# PBI ?
+	c_pbi = new Capacitor
+	c_pbi.capacitance = 2.2uF +/- 20%
+	mon.PBI ~> c_pbi ~> gnd
