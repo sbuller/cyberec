@@ -1,0 +1,18 @@
+#pragma experiment("TRAITS")
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+import is_auto_generated
+
+component Milliohm_HoYLR2512E_3W_1mR_1_package:
+    # This trait marks this file as auto-generated
+    # If you want to manually change it, remove the trait
+    trait is_auto_generated<system="ato_part", source="easyeda:C5375452", date="2025-07-12T14:56:54.838970+00:00", checksum="9f048d11d38cec7b31cd4bee399eb741139e2406f11fb0b52c1334fc0223ab53">
+
+    trait is_atomic_part<manufacturer="Milliohm", partnumber="HoYLR2512E-3W-1mR-1%", footprint="R2512.kicad_mod", symbol="HOYLR2512E-3W-1MR-1%.kicad_sym", model="R2512_L6.3-W3.2-H0.6.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C5375452", manufacturer="Milliohm", partno="HoYLR2512E-3W-1mR-1%">
+    trait has_designator_prefix<prefix="R">
+
+    # pins
+    pin 2
+    pin 1

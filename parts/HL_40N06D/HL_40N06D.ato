@@ -1,0 +1,22 @@
+#pragma experiment("TRAITS")
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+import is_auto_generated
+
+component HL_40N06D_package:
+	# This trait marks this file as auto-generated
+	# If you want to manually change it, remove the trait
+	#trait is_auto_generated<system="ato_part", source="easyeda:C7543836", date="2025-07-13T17:26:17.498435+00:00", checksum="fd16dd3a777d3aa8ef1a32e8ec02f2ab2bd3f2b1aaf4364d8a64001e0554c010">
+	# I modified the offset of the 3d model
+
+	 trait is_atomic_part<manufacturer="HL", partnumber="40N06D", footprint="WDFN-5_L3.3-W3.3-P0.65-BL.kicad_mod", symbol="40N06D.kicad_sym", model="WDFN-5_L3.3-W3.3-P0.65-BL.step">
+	 trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C7543836", manufacturer="HL", partno="40N06D">
+	 trait has_designator_prefix<prefix="U">
+
+	 # pins
+	 signal D ~ pin 5
+	 signal G ~ pin 4
+	 signal S ~ pin 3
+	 S ~ pin 2
+	 S ~ pin 1

@@ -6,17 +6,18 @@ import is_atomic_part
 import is_auto_generated
 
 component JST_Sales_America_B4B_XH_A_LF__SN_package:
-    # This trait marks this file as auto-generated
-    # If you want to manually change it, remove the trait
-    trait is_auto_generated<system="ato_part", source="easyeda:C144395", date="2025-07-12T02:24:19.801945+00:00", checksum="f42c2b0d77126d67f588e00437e0b1ce68c89e2f4f33f2483cb78e8212ad0333">
+	# This trait marks this file as auto-generated
+	# If you want to manually change it, remove the trait
+	#trait is_auto_generated<system="ato_part", source="easyeda:C144395", date="2025-07-12T02:24:19.801945+00:00", checksum="f42c2b0d77126d67f588e00437e0b1ce68c89e2f4f33f2483cb78e8212ad0333">
+	# The 3d model offset has been adjusted
 
-    trait is_atomic_part<manufacturer="JST Sales America", partnumber="B4B-XH-A(LF)(SN)", footprint="CONN-TH_B4B-XH-A-LF-SN.kicad_mod", symbol="B4B-XH-A(LF)(SN).kicad_sym", model="XH2.5-4A.step">
-    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C144395", manufacturer="JST Sales America", partno="B4B-XH-A(LF)(SN)">
-    trait has_designator_prefix<prefix="U">
-    trait has_datasheet_defined<datasheet="https://lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-B4B-XH-A-LF-SN_C144395.pdf">
+	trait is_atomic_part<manufacturer="JST Sales America", partnumber="B4B-XH-A(LF)(SN)", footprint="CONN-TH_B4B-XH-A-LF-SN.kicad_mod", symbol="B4B-XH-A(LF)(SN).kicad_sym", model="XH2.5-4A.step">
+	trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C144395", manufacturer="JST Sales America", partno="B4B-XH-A(LF)(SN)">
+	trait has_designator_prefix<prefix="U">
+	trait has_datasheet_defined<datasheet="https://lcsc.com/datasheet/lcsc_datasheet_2304140030_JST-B4B-XH-A-LF-SN_C144395.pdf">
 
-    # pins
-    pin 1
-    pin 2
-    pin 3
-    pin 4
+	# pins
+	pin 1
+	pin 2
+	pin 3
+	pin 4

@@ -1,13 +1,17 @@
 #pragma experiment("TRAITS")
 import can_bridge_by_name
 import has_designator_prefix
+import has_kicad_footprint
 import NFET
+import PFET
 import CapacitorElectrolytic
 import Capacitor
 import Resistor
 import ElectricPower
 import Inductor
 import Power
+import Diode
+import LED
 
 from "parts/Texas_Instruments_BQ25756ERRVR/Texas_Instruments_BQ25756ERRVR.ato" import Texas_Instruments_BQ25756ERRVR_package
 from "parts/Alpha___Omega_Semicon_AO3400A/Alpha___Omega_Semicon_AO3400A.ato" import Alpha___Omega_Semicon_AO3400A_package
@@ -16,11 +20,79 @@ from "parts/Ymin_VKME2102C820MV/Ymin_VKME2102C820MV.ato" import Ymin_VKME2102C82
 module BQ25756E from Texas_Instruments_BQ25756ERRVR_package:
 	pass
 
+module LED_A from LED:
+	# Just used for the 0603 footprint. Replace with any LED
+	lcsc_id = "C2286"
+	designator = "D"
+
+	signal cathode ~ pin 1
+	signal anode ~ pin 2
+
+module Button:
+	"""Without 50mA 4mm 100MΩ 100000 Times 12V 160gf 3mm 2mm Round Button Standing paste SPST SMD Tactile Switches ROHS"""
+	lcsc_id = "C720477"
+	designator = "S"
+
+	pin 1
+	pin 2
+	trait can_bridge_by_name<input_name="_1", output_name="_2">
+
+module Wire_2:
+	"""Two pin header"""
+	lcsc_id = "C492401"
+	designator = "J"
+
+	pin 1
+	pin 2
+	trait can_bridge_by_name<input_name="_1", output_name="_2">
+
+module Schottky from Diode:
+	"""40V Independent Type 3A 550mV@3A SMA(DO-214AC) Schottky"""
+	lcsc_id = "C8678"
+
+	signal cathode ~ pin 1
+	signal anode ~ pin 2
+
 module AO3400A from NFET:
 	package = new Alpha___Omega_Semicon_AO3400A_package
 	signal D ~ package.D
 	signal G ~ package.G
 	signal S ~ package.S
+
+module PFET_A from PFET:
+	"""60V 15A 25W 70mΩ@10V,10A 1 P-Channel PDFN-8L(3x3)"""
+	lcsc_id = "C42457005"
+	designator_prefix = "Q"
+
+	signal D
+	signal G
+	signal S
+
+	pin 1 ~ S
+	pin 2 ~ S
+	pin 3 ~ S
+	pin 4 ~ G
+	pin 5 ~ D
+	pin 6 ~ D
+	pin 7 ~ D
+	pin 8 ~ D
+	pin 9 ~ D
+
+module NFET_A from NFET:
+	"""60V 40A 12mΩ 2.5V 1 N-Channel PDFN-8(3x3)"""
+	lcsc_id = "C7543836"
+	designator_prefix = "Q"
+
+	signal D
+	signal G
+	signal S
+
+	pin 1 ~ S
+	pin 2 ~ S
+	pin 3 ~ S
+	pin 4 ~ G
+	pin 5 ~ D
+	# Easy-EDA footprint looks like it would be a problem for automation.
 
 module C_82uF from CapacitorElectrolytic:
 	trait has_designator_prefix<prefix="C">

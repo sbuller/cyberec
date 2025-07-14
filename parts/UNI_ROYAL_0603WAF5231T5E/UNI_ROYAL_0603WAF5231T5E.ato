@@ -10,7 +10,7 @@ component UNI_ROYAL_0603WAF5231T5E_package:
 
     # This trait marks this file as auto-generated
     # If you want to manually change it, remove the trait
-    trait is_auto_generated<system="ato_part", source="easyeda:C23068", date="2025-07-12T01:03:04.291928+00:00", checksum="31825f736fc8a5faeea24d153e5cf4eee0d26833392e7fa6d8e4cd6245d5c296">
+    trait is_auto_generated<system="ato_part", source="easyeda:C23068", date="2025-07-14T01:06:16.873329+00:00", checksum="e1fdcbc63694768dc540191e43bf2706e99aa55b9de11e858250016a58613c10">
 
     trait is_atomic_part<manufacturer="UNI-ROYAL", partnumber="0603WAF5231T5E", footprint="R0603.kicad_mod", symbol="0603WAF5231T5E.kicad_sym", model="R0603.STEP">
     trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C23068", manufacturer="UNI-ROYAL", partno="0603WAF5231T5E">

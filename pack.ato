@@ -1,37 +1,40 @@
 #pragma experiment("BRIDGE_CONNECT")
 import ElectricPower
+import ElectricSignal
 import can_bridge_by_name
 import Resistor
 import Capacitor
 
 from "sense.ato" import Sense
 
-from "parts/parts.ato" import R_10, C_100nF, XT60PW_M, JST_B4B_XH, BQ40Z80
+from "parts/parts.ato" import R_10, C_100nF, XT60PW_M, JST_B4B_XH, BQ40Z80, Schottky, NFET_A, PFET_A, LED_A, Button, Wire_2
 
 module Pack:
 	signal gnd
 	signal vbat
-	signal vss
-	signal nbat
-	signal pgnd
+	signal pack_p
+	signal pack_n
 
 	bat1 = new XT60PW_M
 	bat2 = new XT60PW_M
 
-	bat1.power.gnd ~ nbat
+	bat1.power.gnd ~ gnd
 	bat1.power.vcc ~ bat2.power.gnd
 	bat2.power.vcc ~ vbat
 
 	bal1 = new JST_B4B_XH
 	bal2 = new JST_B4B_XH
 
-	bal1.c3 ~ bal2.gnd
-	bal1.gnd ~ nbat
+	bal1.gnd ~ gnd
 	bal2.c3 ~ vbat
 
 	mon = new BQ40Z80
 
 	# BALANCE LEADS
+	## Jumper
+	bal_jumper = new Resistor
+	bal_jumper.resistance = 0ohm
+	bal1.c3 ~> bal_jumper ~> bal2.gnd
 	## Resistors
 	bal_res = new R_10[6]
 	mon.VC1 ~> bal_res[0] ~> bal1.c1
@@ -49,12 +52,81 @@ module Pack:
 	mon.VC4 ~> bal_caps[4] ~> mon.VC5
 	mon.VC5 ~> bal_caps[5] ~> mon.VC6
 
-	mon.VSS ~ vss
-	mon.SRP ~ vss
-
+	# CURRENT SENSE
 	sense = new Sense
-	sense.differential_capacitance = 100pF
-	nbat ~> sense ~> pgnd
+	sense.differential_capacitance = 100pF +/- 5%
+	sense.sense_resistance = 1mohm +/- 1%
+	sense.gnd ~ gnd
+	gnd ~> sense ~> pack_n
 	sense.sense_p ~ mon.SRP
 	sense.sense_n ~ mon.SRN
+	diff_cap2 = new Capacitor
+	diff_cap2.capacitance = 100nF +/- 10%
+	mon.SRP ~> diff_cap2 ~> mon.SRN
+
+	# GROUNDING
+	mon.VSS ~ gnd
+	mon.EP ~ gnd
+	mon.FUSE ~ gnd
+
+	# PINS 7, 14 & 27 are internally disconnected
+
+	# BAT pin
+	d_bat = new Schottky
+	r_bat = new Resistor
+	r_bat.resistance = 10ohm +/- 1%
+	c_bat = new Capacitor[2]
+	c_bat[0].capacitance = 100pF +/- 5%
+	c_bat[1].capacitance = 100pF +/- 5%
+
+	vbat ~> d_bat ~> r_bat ~> mon.BAT
+	mon.BAT ~> c_bat[0] ~> gnd
+	mon.BAT ~> c_bat[1] ~> gnd
+
+
+	# FETS
+	q1 = new NFET_A
+	q2 = new NFET_A
+
+	r_vcc = new Resistor
+	r_vcc.resistance = 100ohm +/- 1%
+	r_pack = new Resistor
+	r_pack.resistance = 10kohm +/- 1%
+
+	vbat ~ q1.S; q1.D ~> r_vcc ~> mon.VCC
+	pack_p ~ q2.S; q2.D ~> r_vcc
+	pack_p ~> r_pack ~> mon.PACK
+
+	r_vcc ~> mon.VCC
+	q1.G ~ mon.CHG
+	q2.G ~ mon.DSG
+
+	# Precharge
+	q3 = new PFET_A
+	r_precharge = new Resistor
+	r_precharge.resistance = 1kohm +/- 1%
+	q1.D ~ q3.S; q3.D ~> r_precharge ~> vbat
+
+	q3.G ~ mon.PCHG
+
+	# LEDs
+	signal leds_a ~ mon.LEDCNTLA_PDSG_GPIO
+	signal leds_b ~ mon.LEDCNTLB_GPIO
+	signal leds_c ~ mon.LEDCNTLC_GPIO
+	leds = new LED_A[6]
+	leds_a ~> leds[0] ~> leds_b
+	leds_b ~> leds[1] ~> leds_a
+	leds_a ~> leds[2] ~> leds_c
+	leds_b ~> leds[3] ~> leds_c
+	leds_c ~> leds[4] ~> leds_b
+	leds_c ~> leds[5] ~> leds_a
+
+	led_button = new Button
+	mon.nDISP_TS4_ADCIN2_GPIO ~> led_button ~> gnd
+
+	# THERMISTORS
+	TS1 = new Wire_2
+	TS2 = new Wire_2
+	mon.TS1 ~> TS1 ~> gnd
+	mon.TS2 ~> TS2 ~> gnd
 

@@ -14,6 +14,7 @@ module Sense:
 	signal sense_n
 
 	sense_resistance = 5mohm +/- 1%
+	differential_capacitance = 470nF +/- 20%
 
 	r_sense = new Resistor
 	r_sense.resistance = sense_resistance
@@ -21,7 +22,8 @@ module Sense:
 	r_pos = new R_10
 	r_neg = new R_10
 
-	c_diff = new C_470nF
+	c_diff = new Capacitor
+	c_diff.capacitance = differential_capacitance
 
 	c_pos = new C_100nF
 	c_neg = new C_100nF
