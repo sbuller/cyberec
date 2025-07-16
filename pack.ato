@@ -15,10 +15,12 @@ module Pack:
 	signal pack_p
 	signal pack_n
 
+	signal hc_gnd
+
 	bat1 = new XT60PW_M
 	bat2 = new XT60PW_M
 
-	bat1.power.gnd ~ gnd
+	bat1.power.gnd ~ hc_gnd
 	bat1.power.vcc ~ bat2.power.gnd
 	bat2.power.vcc ~ vbat
 
@@ -56,7 +58,7 @@ module Pack:
 	sense = new Sense
 	sense.differential_capacitance = 100pF +/- 5%
 	sense.sense_resistance = 1mohm +/- 1%
-	sense.gnd ~ gnd
+	sense.gnd ~ hc_gnd
 	gnd ~> sense ~> pack_n
 	sense.sense_p ~ mon.SRP
 	sense.sense_n ~ mon.SRN
@@ -74,7 +76,7 @@ module Pack:
 	# BAT pin
 	d_bat = new Schottky
 	r_bat = new Resistor
-	r_bat.resistance = 10ohm +/- 1%
+	r_bat.resistance = 100ohm +/- 1%
 	c_bat = new Capacitor[2]
 	c_bat[0].capacitance = 100pF +/- 5%
 	c_bat[1].capacitance = 100pF +/- 5%
@@ -85,29 +87,40 @@ module Pack:
 
 
 	# FETS
-	q1 = new NFET_A
-	q2 = new NFET_A
+	q_chg = new NFET_A
+	q_dsg = new NFET_A
 
+
+	r_qchg = new Resistor
+	r_qchg.resistance = 10Mohm +/- 1%
+	r_qdsg = new Resistor
+	r_qdsg.resistance = 10Mohm +/- 1%
+	d_qdsg = new Schottky
+
+	vbat ~ q_chg.S
+	pack_p ~ q_dsg.S
+
+	q_chg.G ~ mon.CHG
+	q_dsg.G ~ mon.DSG
+
+	# BAT, PACK
 	r_vcc = new Resistor
 	r_vcc.resistance = 100ohm +/- 1%
 	r_pack = new Resistor
 	r_pack.resistance = 10kohm +/- 1%
 
-	vbat ~ q1.S; q1.D ~> r_vcc ~> mon.VCC
-	pack_p ~ q2.S; q2.D ~> r_vcc
 	pack_p ~> r_pack ~> mon.PACK
-
 	r_vcc ~> mon.VCC
-	q1.G ~ mon.CHG
-	q2.G ~ mon.DSG
+	q_chg.D ~> r_vcc ~> mon.VCC
+	q_dsg.D ~> r_vcc
 
 	# Precharge
-	q3 = new PFET_A
+	q_pchg = new PFET_A
 	r_precharge = new Resistor
 	r_precharge.resistance = 1kohm +/- 1%
-	q1.D ~ q3.S; q3.D ~> r_precharge ~> vbat
+	q_chg.D ~ q_pchg.S; q_pchg.D ~> r_precharge ~> vbat
 
-	q3.G ~ mon.PCHG
+	q_pchg.G ~ mon.PCHG
 
 	# LEDs
 	signal leds_a ~ mon.LEDCNTLA_PDSG_GPIO
@@ -135,7 +148,7 @@ module Pack:
 	# SMBC
 	# SMBD
 
-	# PBI ?
+	# PBI power backup for internal LDO
 	c_pbi = new Capacitor
 	c_pbi.capacitance = 2.2uF +/- 20%
 	mon.PBI ~> c_pbi ~> gnd
