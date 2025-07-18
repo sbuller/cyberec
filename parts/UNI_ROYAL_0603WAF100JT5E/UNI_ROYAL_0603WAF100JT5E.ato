@@ -10,12 +10,12 @@ component UNI_ROYAL_0603WAF100JT5E_package:
 
     # This trait marks this file as auto-generated
     # If you want to manually change it, remove the trait
-    trait is_auto_generated<system="ato_part", source="easyeda:C22859", date="2025-07-14T02:53:07.722216+00:00", checksum="4bcf26c13fa8f0f81924539d75ae6c02dd1bc84e97a16254e68d66943828ec2f">
+    trait is_auto_generated<system="ato_part", source="easyeda:C22859", date="2025-07-16T22:29:17.945287+00:00", checksum="ed45f3895f1423759346ac1bc2248f3b6aeb446da9dbc91e7ac5fd09ecafd006">
 
     trait is_atomic_part<manufacturer="UNI-ROYAL", partnumber="0603WAF100JT5E", footprint="R0603.kicad_mod", symbol="0603WAF100JT5E.kicad_sym", model="R0603.STEP">
     trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C22859", manufacturer="UNI-ROYAL", partno="0603WAF100JT5E">
     trait has_designator_prefix<prefix="R">
-    trait has_datasheet_defined<datasheet="https://lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-Uniroyal-Elec-0603WAF100JT5E_C22859.pdf">
+    trait has_datasheet_defined<datasheet="https://lcsc.com/datasheet/lcsc_datasheet_2411221126_UNI-ROYAL-0603WAF100JT5E_C22859.pdf">
 
     # pins
     pin 2

@@ -7,7 +7,7 @@ import is_auto_generated
 component CCTC_TCC0402X5R474M160AT_package:
     # This trait marks this file as auto-generated
     # If you want to manually change it, remove the trait
-    trait is_auto_generated<system="ato_part", source="easyeda:C7393859", date="2025-07-12T14:56:53.615601+00:00", checksum="3055cb23dc3d242f576e8f8b38b58e337fcf872c70dbc44639dc4589ac00f372">
+    trait is_auto_generated<system="ato_part", source="easyeda:C7393859", date="2025-07-16T22:38:03.957409+00:00", checksum="3e2d7779b00d3b1f70909fab733d5c75a22a092e3d72c774170d201f058cfc35">
 
     trait is_atomic_part<manufacturer="CCTC", partnumber="TCC0402X5R474M160AT", footprint="C0402.kicad_mod", symbol="TCC0402X5R474M160AT.kicad_sym", model="C0402_L1.0-W0.5-H0.5.step">
     trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C7393859", manufacturer="CCTC", partno="TCC0402X5R474M160AT">

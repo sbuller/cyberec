@@ -10,7 +10,7 @@ component Hubei_KENTO_Elec_KT_0603R_package:
 
     # This trait marks this file as auto-generated
     # If you want to manually change it, remove the trait
-    trait is_auto_generated<system="ato_part", source="easyeda:C2286", date="2025-07-14T02:14:12.439770+00:00", checksum="56f52cd71ad273b3454b13ec5e0525b5b6cc390e4a3feaa456a738ffbbd42e50">
+    trait is_auto_generated<system="ato_part", source="easyeda:C2286", date="2025-07-16T22:33:17.993508+00:00", checksum="b96d3022899cb63739848e7bc23cc94cafc73509ec230f380df89730a7daff11">
 
     trait is_atomic_part<manufacturer="Hubei KENTO Elec", partnumber="KT-0603R", footprint="LED0603-RD.kicad_mod", symbol="KT-0603R.kicad_sym", model="LED0603-RD-YELLOW.STEP">
     trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C2286", manufacturer="Hubei KENTO Elec", partno="KT-0603R">

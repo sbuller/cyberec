@@ -10,7 +10,7 @@ component YAGEO_CC0603KRX7R9BB104_package:
 
     # This trait marks this file as auto-generated
     # If you want to manually change it, remove the trait
-    trait is_auto_generated<system="ato_part", source="easyeda:C14663", date="2025-07-14T02:53:15.251372+00:00", checksum="a652b6cd3b99e98ff8b2a5f65714912ae270ecf477611d65d004f7187dc34005">
+    trait is_auto_generated<system="ato_part", source="easyeda:C14663", date="2025-07-16T22:29:30.965716+00:00", checksum="92ac5e50c9e49d95f22a6ab4e85a2b71565578873770589d06ad6776d5ae04fb">
 
     trait is_atomic_part<manufacturer="YAGEO", partnumber="CC0603KRX7R9BB104", footprint="C0603.kicad_mod", symbol="CC0603KRX7R9BB104.kicad_sym", model="C0603_L1.6-W0.8-H0.8.step">
     trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C14663", manufacturer="YAGEO", partno="CC0603KRX7R9BB104">

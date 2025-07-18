@@ -1,0 +1,20 @@
+#pragma experiment("TRAITS")
+import has_datasheet_defined
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+import is_auto_generated
+
+component YAGEO_RC0603FR_0710ML_package:
+    # This trait marks this file as auto-generated
+    # If you want to manually change it, remove the trait
+    trait is_auto_generated<system="ato_part", source="easyeda:C114606", date="2025-07-16T22:40:15.726699+00:00", checksum="129d7b6d47aa8adae07a5dc63dee62cd6f66018674943d9e0910f6003078be72">
+
+    trait is_atomic_part<manufacturer="YAGEO", partnumber="RC0603FR-0710ML", footprint="R0603.kicad_mod", symbol="RC0603FR-0710ML.kicad_sym", model="R0603.STEP">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C114606", manufacturer="YAGEO", partno="RC0603FR-0710ML">
+    trait has_designator_prefix<prefix="R">
+    trait has_datasheet_defined<datasheet="https://lcsc.com/datasheet/lcsc_datasheet_2506161055_YAGEO-RC0603FR-0710ML_C114606.pdf">
+
+    # pins
+    pin 2
+    pin 1

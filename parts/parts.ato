@@ -23,7 +23,8 @@ module BQ25756E from Texas_Instruments_BQ25756ERRVR_package:
 module LED_A from LED:
 	# Just used for the 0603 footprint. Replace with any LED
 	lcsc_id = "C2286"
-	designator = "D"
+	designator_prefix = "D"
+	trait has_designator_prefix<prefix="D">
 
 	signal cathode ~ pin 1
 	signal anode ~ pin 2
@@ -31,7 +32,7 @@ module LED_A from LED:
 module Button:
 	"""Without 50mA 4mm 100MΩ 100000 Times 12V 160gf 3mm 2mm Round Button Standing paste SPST SMD Tactile Switches ROHS"""
 	lcsc_id = "C720477"
-	designator = "S"
+	designator_prefix = "S"
 
 	pin 1
 	pin 2
@@ -40,7 +41,7 @@ module Button:
 module Wire_2:
 	"""Two pin header"""
 	lcsc_id = "C492401"
-	designator = "J"
+	designator_prefix = "J"
 
 	pin 1
 	pin 2
@@ -49,12 +50,16 @@ module Wire_2:
 module Schottky from Diode:
 	"""40V Independent Type 3A 550mV@3A SMA(DO-214AC) Schottky"""
 	lcsc_id = "C8678"
+	designator_prefix = "D"
+	trait has_designator_prefix<prefix="D">
 
 	signal cathode ~ pin 1
 	signal anode ~ pin 2
 
 module AO3400A from NFET:
 	package = new Alpha___Omega_Semicon_AO3400A_package
+	trait has_designator_prefix<prefix="Q">
+	designator_prefix = "Q"
 	signal D ~ package.D
 	signal G ~ package.G
 	signal S ~ package.S
@@ -63,6 +68,7 @@ module PFET_A from PFET:
 	"""60V 15A 25W 70mΩ@10V,10A 1 P-Channel PDFN-8L(3x3)"""
 	lcsc_id = "C42457005"
 	designator_prefix = "Q"
+	trait has_designator_prefix<prefix="Q">
 
 	signal D
 	signal G
@@ -82,6 +88,7 @@ module NFET_A from NFET:
 	"""60V 40A 12mΩ 2.5V 1 N-Channel PDFN-8(3x3)"""
 	lcsc_id = "C7543836"
 	designator_prefix = "Q"
+	trait has_designator_prefix<prefix="Q">
 
 	signal D
 	signal G
@@ -232,6 +239,17 @@ component XT60PW_M:
 	power.gnd ~ gnd
 
 	lcsc_id = "C98732"
+	designator_prefix = "J"
+
+component XT60_M:
+	"""Changzhou Amass Elec XT60U-M"""
+	signal gnd ~ pin 1
+	signal vin ~ pin 2
+	power = new ElectricPower
+	power.vcc ~ vin
+	power.gnd ~ gnd
+
+	lcsc_id = "C129184"
 	designator_prefix = "J"
 
 component JST_B4B_XH:

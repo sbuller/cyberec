@@ -7,7 +7,7 @@ import is_auto_generated
 component XNRUSEMI_XR15P06D_package:
     # This trait marks this file as auto-generated
     # If you want to manually change it, remove the trait
-    trait is_auto_generated<system="ato_part", source="easyeda:C42457005", date="2025-07-14T00:49:44.281312+00:00", checksum="79eb65a62fa45f65bbb67481aa87b03bbe1d96e02b3922a0dfd8b967b782667a">
+    trait is_auto_generated<system="ato_part", source="easyeda:C42457005", date="2025-07-16T22:35:08.161869+00:00", checksum="39d84cda2bbf126884050c7e9f8745fcff16960a242276e335f20e0fbcc2dd5e">
 
     trait is_atomic_part<manufacturer="XNRUSEMI", partnumber="XR15P06D", footprint="DFN-8_L3.0-W3.0-P0.65-BL-4.kicad_mod", symbol="XR15P06D.kicad_sym", model="DFN-8_L3.0-W3.0-P0.65-BL-4.step">
     trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C42457005", manufacturer="XNRUSEMI", partno="XR15P06D">

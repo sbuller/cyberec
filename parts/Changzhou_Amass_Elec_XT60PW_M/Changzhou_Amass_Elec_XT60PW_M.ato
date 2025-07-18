@@ -7,7 +7,7 @@ import is_auto_generated
 component Changzhou_Amass_Elec_XT60PW_M_package:
     # This trait marks this file as auto-generated
     # If you want to manually change it, remove the trait
-    trait is_auto_generated<system="ato_part", source="easyeda:C98732", date="2025-07-12T02:24:20.343213+00:00", checksum="58d786c152d09904d5328d27ef84fce18c2ba7f5c7bc4660c6f112b8b58a2dfa">
+    trait is_auto_generated<system="ato_part", source="easyeda:C98732", date="2025-07-16T22:31:05.998887+00:00", checksum="63d915e13eb98f63065b13f18582f230a7b6a195fe34fdec3eb45d314d98a040">
 
     trait is_atomic_part<manufacturer="Changzhou Amass Elec", partnumber="XT60PW-M", footprint="CONN-TH_XT60PW-M.kicad_mod", symbol="XT60PW-M.kicad_sym", model="CONN-TH_XT60PW-M.step">
     trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C98732", manufacturer="Changzhou Amass Elec", partno="XT60PW-M">

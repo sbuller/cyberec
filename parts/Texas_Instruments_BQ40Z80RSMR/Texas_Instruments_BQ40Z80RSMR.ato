@@ -7,7 +7,7 @@ import is_auto_generated
 component Texas_Instruments_BQ40Z80RSMR_package:
     # This trait marks this file as auto-generated
     # If you want to manually change it, remove the trait
-    trait is_auto_generated<system="ato_part", source="easyeda:C882850", date="2025-07-12T01:03:11.100622+00:00", checksum="9070c2ae2355c4e8e8ec13fbb862d7ab39db58d774ad956c075368a8ef6ca686">
+    trait is_auto_generated<system="ato_part", source="easyeda:C882850", date="2025-07-16T22:34:16.974299+00:00", checksum="3e8466493f73de56fd67cc7db31528cb93c89d7b58c58a5d2915f2778b6a16b7">
 
     trait is_atomic_part<manufacturer="Texas Instruments", partnumber="BQ40Z80RSMR", footprint="VQFN-32_L4.0-W4.0-P0.40-TL-EP1.4.kicad_mod", symbol="BQ40Z80RSMR.kicad_sym", model="VQFN-32_L4.0-W4.0-P0.40-TL-EP1.4.STEP">
     trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C882850", manufacturer="Texas Instruments", partno="BQ40Z80RSMR">

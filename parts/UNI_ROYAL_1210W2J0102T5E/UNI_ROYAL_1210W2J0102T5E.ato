@@ -1,0 +1,20 @@
+#pragma experiment("TRAITS")
+import has_datasheet_defined
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+import is_auto_generated
+
+component UNI_ROYAL_1210W2J0102T5E_package:
+    # This trait marks this file as auto-generated
+    # If you want to manually change it, remove the trait
+    trait is_auto_generated<system="ato_part", source="easyeda:C270888", date="2025-07-18T02:45:53.291771+00:00", checksum="51203bd8c7969461da44e70a2c9d89e55d44b3fa2c0e45014f01796303fb7cf5">
+
+    trait is_atomic_part<manufacturer="UNI-ROYAL", partnumber="1210W2J0102T5E", footprint="R1210.kicad_mod", symbol="1210W2J0102T5E.kicad_sym", model="R1210_L3.2-W2.6-H0.6.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C270888", manufacturer="UNI-ROYAL", partno="1210W2J0102T5E">
+    trait has_designator_prefix<prefix="R">
+    trait has_datasheet_defined<datasheet="https://lcsc.com/datasheet/lcsc_datasheet_2411221127_UNI-ROYAL-1210W2J0102T5E_C270888.pdf">
+
+    # pins
+    pin 2
+    pin 1

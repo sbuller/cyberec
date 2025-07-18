@@ -259,4 +259,18 @@
         (options "")
         (descr "atopile: part lib: YAGEO_RC0603FR_0710ML")
     )
+    (lib
+        (name "UNI_ROYAL_1210W2J0102T5E")
+        (type "KiCad")
+        (uri "${KIPRJMOD}/../../parts/UNI_ROYAL_1210W2J0102T5E")
+        (options "")
+        (descr "atopile: part lib: UNI_ROYAL_1210W2J0102T5E")
+    )
+    (lib
+        (name "Changzhou_Amass_Elec_XT60U_M")
+        (type "KiCad")
+        (uri "${KIPRJMOD}/../../parts/Changzhou_Amass_Elec_XT60U_M")
+        (options "")
+        (descr "atopile: part lib: Changzhou_Amass_Elec_XT60U_M")
+    )
 )

@@ -1,10 +1,10 @@
 (kicad_symbol_lib
     (version 1)
     (generator "faebryk")
-    (symbol "CL10B474KA8NNNC"
-        (property "Reference" "C"
+    (symbol "XT60U-M"
+        (property "Reference" "CN"
             (id 0)
-            (at 0 5.08 0)
+            (at 0 6.35 0)
             (effects
                 (font
                     (size 1.27 1.27)
@@ -12,9 +12,9 @@
                 (hide no)
             )
         )
-        (property "Value" "CL10B474KA8NNNC"
+        (property "Value" "XT60U-M"
             (id 1)
-            (at 0 -5.08 0)
+            (at 0 -6.35 0)
             (effects
                 (font
                     (size 1.27 1.27)
@@ -22,9 +22,9 @@
                 (hide no)
             )
         )
-        (property "Footprint" "C1623:C0603"
+        (property "Footprint" "C129184:CONN-TH_XT60U-M"
             (id 2)
-            (at 0 -7.62 0)
+            (at 0 -8.89 0)
             (effects
                 (font
                     (size 1.27 1.27)
@@ -32,19 +32,9 @@
                 (hide yes)
             )
         )
-        (property "Datasheet" "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SAMSUNG_CL10B474KA8NNNC_470nF-474-10-25V_C1623.html"
-            (id 3)
-            (at 0 -10.16 0)
-            (effects
-                (font
-                    (size 1.27 1.27)
-                )
-                (hide yes)
-            )
-        )
-        (property "LCSC Part" "C1623"
+        (property "LCSC Part" "C129184"
             (id 5)
-            (at 0 -12.7 0)
+            (at 0 -11.43 0)
             (effects
                 (font
                     (size 1.27 1.27)
@@ -52,7 +42,7 @@
                 (hide yes)
             )
         )
-        (property "checksum" "4e595eb81c38c987bab85e6bd54f3f2063735dba8a7246c1ef9b986031e0415d"
+        (property "checksum" "f1bd2a90e5a08e23c2a109cc0cbe39cba0faae5e3c22d32bd6b7e0c3db852e55"
             (at 0 0 0)
             (effects
                 (font
@@ -63,8 +53,10 @@
         )
         (in_bom yes)
         (on_board yes)
-        (symbol "CL10B474KA8NNNC_0_1"
-            (polyline
+        (symbol "XT60U-M_0_1"
+            (circle
+                (center -1.27 2.54)
+                (end -0.89 2.54)
                 (stroke
                     (width 0)
                     (type default)
@@ -73,57 +65,23 @@
                 (fill
                     (type none)
                 )
-                (pts
-                    (xy -0.51 2.03)
-                    (xy -0.51 -2.03)
-                )
             )
-            (polyline
+            (rectangle
+                (start -2.54 3.81)
+                (end 2.54 -3.81)
                 (stroke
                     (width 0)
                     (type default)
                     (color 0 0 0 0)
                 )
                 (fill
-                    (type none)
-                )
-                (pts
-                    (xy 0.51 2.03)
-                    (xy 0.51 -2.03)
+                    (type background)
                 )
             )
-            (polyline
-                (stroke
-                    (width 0)
-                    (type default)
-                    (color 0 0 0 0)
-                )
-                (fill
-                    (type none)
-                )
-                (pts
-                    (xy -1.27 0)
-                    (xy -0.51 0)
-                )
-            )
-            (polyline
-                (stroke
-                    (width 0)
-                    (type default)
-                    (color 0 0 0 0)
-                )
-                (fill
-                    (type none)
-                )
-                (pts
-                    (xy 0.51 0)
-                    (xy 1.27 0)
-                )
-            )
-            (pin input line
-                (at -3.81 0 0)
+            (pin unspecified line
+                (at -5.08 1.27 0)
                 (length 2.54)
-                (name "1"
+                (name "+"
                     (effects
                         (font
                             (size 1.27 1.27)
@@ -140,10 +98,10 @@
                     )
                 )
             )
-            (pin input line
-                (at 3.81 0 180)
+            (pin unspecified line
+                (at -5.08 -1.27 0)
                 (length 2.54)
-                (name "2"
+                (name "-"
                     (effects
                         (font
                             (size 1.27 1.27)

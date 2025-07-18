@@ -7,7 +7,7 @@ import Capacitor
 
 from "sense.ato" import Sense
 
-from "parts/parts.ato" import R_10, C_100nF, XT60PW_M, JST_B4B_XH, BQ40Z80, Schottky, NFET_A, PFET_A, LED_A, Button, Wire_2
+from "parts/parts.ato" import R_10, C_100nF, XT60_M, JST_B4B_XH, BQ40Z80, Schottky, NFET_A, PFET_A, LED_A, Button, Wire_2
 
 module Pack:
 	signal gnd
@@ -17,8 +17,8 @@ module Pack:
 
 	signal hc_gnd
 
-	bat1 = new XT60PW_M
-	bat2 = new XT60PW_M
+	bat1 = new XT60_M
+	bat2 = new XT60_M
 
 	bat1.power.gnd ~ hc_gnd
 	bat1.power.vcc ~ bat2.power.gnd
@@ -100,6 +100,10 @@ module Pack:
 	vbat ~ q_chg.S
 	pack_p ~ q_dsg.S
 
+	vbat ~> r_qchg ~> q_chg.G
+	pack_p ~> r_qdsg ~> q_dsg.G
+	pack_p ~> d_qdsg ~> q_dsg.G
+
 	q_chg.G ~ mon.CHG
 	q_dsg.G ~ mon.DSG
 
@@ -117,8 +121,14 @@ module Pack:
 	# Precharge
 	q_pchg = new PFET_A
 	r_precharge = new Resistor
-	r_precharge.resistance = 1kohm +/- 1%
+	r_precharge.resistance = 1kohm +/- 5%
+	r_precharge.max_power = 0.5W
+	r_qpchg = new Resistor
+	r_qpchg.resistance = 10Mohm +/- 1%
+
 	q_chg.D ~ q_pchg.S; q_pchg.D ~> r_precharge ~> vbat
+
+	q_pchg.S ~> r_qpchg ~> q_chg.G
 
 	q_pchg.G ~ mon.PCHG
 
@@ -129,10 +139,10 @@ module Pack:
 	leds = new LED_A[6]
 	leds_a ~> leds[0] ~> leds_b
 	leds_b ~> leds[1] ~> leds_a
-	leds_a ~> leds[2] ~> leds_c
-	leds_b ~> leds[3] ~> leds_c
-	leds_c ~> leds[4] ~> leds_b
-	leds_c ~> leds[5] ~> leds_a
+	leds_b ~> leds[2] ~> leds_c
+	leds_c ~> leds[3] ~> leds_b
+	leds_c ~> leds[4] ~> leds_a
+	leds_a ~> leds[5] ~> leds_c
 
 	led_button = new Button
 	mon.nDISP_TS4_ADCIN2_GPIO ~> led_button ~> gnd
