@@ -1,3 +1,11 @@
+Control signals. Can I just wire up the SMB and I2C lines, and send off to a
+remote uC? Do I need the interrupt line? Probably... What other lines are
+needed? Can I put the uC on the board? It's a little tight, and I'd like to
+get this thing shipped already. Still. LDL40 and STM32L431. Then I need to
+connect all relevant IO to this board. The backside is available, and I would
+like to go to 4-layer for the stackup. Have to reduce size to 50x50 for 4 layer.
+Well, it's not mandatory, but desired.
+
 Still need and EC for this EC project.
 
 EC needs to power the RPi. 5.2V, ~2.5A. Probably want an enable/disable.
