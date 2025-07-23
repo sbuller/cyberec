@@ -2,18 +2,40 @@
 #pragma experiment("BRIDGE_CONNECT")
 import ElectricPower
 import Resistor
+import I2C
 
 from "pack.ato" import Pack
 from "charger.ato" import Charger
+from "parts/parts.ato" import XT60_M, JST_B4B_XH
 
 module App:
     signal gnd
     signal vsys
+
+    i2c = new I2C
+
+    sys_pwr = new XT60_M
+    i2c_bus = new JST_B4B_XH
+    ac_pwr = new XT60_M
 
     pack = new Pack
     charger = new Charger
 
     charger.gnd ~ gnd
     pack.pack_n ~ gnd
+
     charger.vsys ~ vsys
     pack.pack_p ~ vsys
+
+    charger.i2c ~ i2c
+    pack.i2c ~ i2c
+
+    i2c_bus.gnd ~ gnd
+    i2c_bus.c1 ~ i2c.sda.line
+    i2c_bus.c2 ~ i2c.scl.line
+
+    sys_pwr.gnd ~ gnd
+    sys_pwr.vin ~ vsys
+
+    ac_pwr.gnd ~ gnd
+    ac_pwr.vin ~ charger.vbus
