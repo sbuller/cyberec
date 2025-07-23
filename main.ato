@@ -8,9 +8,12 @@ from "charger.ato" import Charger
 
 module App:
     signal gnd
+    signal vsys
 
     pack = new Pack
     charger = new Charger
 
     charger.gnd ~ gnd
-    pack.gnd ~ gnd
+    pack.pack_n ~ gnd
+    charger.vsys ~ vsys
+    pack.pack_p ~ vsys

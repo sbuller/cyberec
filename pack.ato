@@ -15,12 +15,10 @@ module Pack:
 	signal pack_p
 	signal pack_n
 
-	signal hc_gnd
-
 	bat1 = new XT60_M
 	bat2 = new XT60_M
 
-	bat1.power.gnd ~ hc_gnd
+	bat1.power.gnd ~ gnd
 	bat1.power.vcc ~ bat2.power.gnd
 	bat2.power.vcc ~ vbat
 
@@ -58,7 +56,7 @@ module Pack:
 	sense = new Sense
 	sense.differential_capacitance = 100pF +/- 5%
 	sense.sense_resistance = 1mohm +/- 1%
-	sense.gnd ~ hc_gnd
+	sense.gnd ~ gnd
 	gnd ~> sense ~> pack_n
 	sense.sense_p ~ mon.SRP
 	sense.sense_n ~ mon.SRN
