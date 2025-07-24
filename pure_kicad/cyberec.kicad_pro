@@ -413,6 +413,14 @@
     [
       "40353889-c50f-4e31-a1c9-0677743efa04",
       "Root"
+    ],
+    [
+      "f305ac31-02c3-4de5-851e-b0914718a8b5",
+      "Charger"
+    ],
+    [
+      "8b99ca33-10b1-4de7-aaf1-12ec8d8c3fec",
+      "Battery Monitor"
     ]
   ],
   "text_variables": {}
