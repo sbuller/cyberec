@@ -1,0 +1,350 @@
+(footprint "CONN-TH_XT60U-M"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -4 180)
+		(layer "F.SilkS")
+		(uuid "d79ed5e7-05ed-4111-b045-bb6e9273c21d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" ""
+		(at 0 4 180)
+		(layer "F.Fab")
+		(uuid "df8a4b84-0818-41fe-b478-a4b17ff26c96")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/1810251312_Changzhou-Amass-Elec-XT60U-M_C129184.pdf"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "27464c57-8b49-4778-9596-167d37e50c75")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a9575562-f7f8-41f5-b86d-39aa44d33b78")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "checksum" "f4d1215250375e4e5bbd89e62b745ecd86577ae5b55660de5d165da8dc222ac5"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "49542be5-e409-45b1-a6b9-df9044f886ea")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "__atopile_lib_fp_hash__" "e91d49a8-140d-abb2-fd45-c28c2c23bac2"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "73c0f1b6-8cd1-4ca8-869c-c0457bf685e4")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "LCSC" "C129184"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "a590c670-efda-41e6-ba7c-0769501715dc")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "Manufacturer" "Changzhou Amass Elec"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "6645b781-2898-4aca-8b1d-877c97f51799")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "Partnumber" "XT60U-M"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "f347717e-aa12-4e69-b1f0-49a10b49cb3b")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "atopile_address" "pack.bat1"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "9d3f8c7f-acb5-4fbd-9d83-7d9af4aa55d7")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -7.75 1.53)
+		(end -7.75 -1.57)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c8a8e16b-2ead-4c40-8a97-c7517548d3b0")
+	)
+	(fp_line
+		(start -4.94 -4.06)
+		(end -5.18 -3.82)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9a8d44be-6f8f-4112-9b7e-9af30edf99a5")
+	)
+	(fp_line
+		(start -4.94 4.07)
+		(end -5.16 3.85)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7d49cc14-1d0d-4ac1-bec2-f7f311e4a344")
+	)
+	(fp_line
+		(start -4.89 -4.06)
+		(end -4.94 -4.06)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d036026c-b15c-4984-98a7-b7188967cf85")
+	)
+	(fp_line
+		(start -4.89 -4.06)
+		(end 7.36 -4.06)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "f1fe8a56-a2f5-4191-9428-803deae3e97d")
+	)
+	(fp_line
+		(start -4.69 -3.78)
+		(end 7.62 -3.78)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d827b252-3b3b-4d0e-9bbc-e8df4cf9119d")
+	)
+	(fp_line
+		(start -4.35 3.81)
+		(end 7.59 3.81)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fa9fba84-ad1f-40ea-a5b0-1df1ed639231")
+	)
+	(fp_line
+		(start 7.3 4.07)
+		(end -4.94 4.07)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fd7fdff1-e7d1-4158-8304-650afc616498")
+	)
+	(fp_line
+		(start 7.3 4.07)
+		(end 7.35 4.07)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9a25e0e1-c4f6-45de-a878-55360d86d5e1")
+	)
+	(fp_line
+		(start 7.35 4.07)
+		(end 7.59 3.82)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0290390c-8fe2-494a-af45-2cf92d1f9aae")
+	)
+	(fp_line
+		(start 7.36 -4.06)
+		(end 7.57 -3.84)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "effbfa50-b585-43ea-be22-3afa14a893e8")
+	)
+	(fp_line
+		(start 7.62 -3.78)
+		(end 7.62 3.82)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b70bd752-a963-49b0-9769-0b350fa3afae")
+	)
+	(fp_arc
+		(start -7.747265 -1.573006)
+		(mid -6.471773 -3.027169)
+		(end -4.69 -3.78)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "d607d05c-4b6c-4fa1-814e-dd1c9bddb050")
+	)
+	(fp_arc
+		(start -4.348651 3.807443)
+		(mid -6.285065 3.046807)
+		(end -7.73 1.55)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0b52cfcd-f1be-40d0-82b7-674c76f7ee4a")
+	)
+	(fp_circle
+		(center -3.6 0)
+		(end -2.53 0)
+		(stroke
+			(width 2.15)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "78a6d2e1-a816-4284-a9ff-fcaa59edee75")
+	)
+	(fp_circle
+		(center 3.6 0)
+		(end 4.67 0)
+		(stroke
+			(width 2.15)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "6280aa75-a561-4d64-b24b-43756a8895a7")
+	)
+	(fp_circle
+		(center 7.65 -3.95)
+		(end 7.68 -3.95)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "716cb780-7c41-4bb0-8bf7-409e1bfadbbe")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -4 180)
+		(layer "F.SilkS")
+		(uuid "cb8ec93e-f81b-49b2-86ba-10c45779fc7f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(uuid "a78ac2bf-80f8-47e7-80fe-79e0e85870b5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole circle
+		(at 3.6 0 270)
+		(size 6 6)
+		(drill 4.700016)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "c8da07fc-25f1-43b9-91dc-1004d4b70225")
+	)
+	(pad "2" thru_hole circle
+		(at -3.6 0 270)
+		(size 6 6)
+		(drill 4.700016)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "126f86ab-f375-4ac8-9296-db21e3496684")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../parts/Changzhou_Amass_Elec_XT60U_M/2.STEP"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

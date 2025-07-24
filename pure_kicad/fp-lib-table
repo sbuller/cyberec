@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "cyberec")(type "KiCad")(uri "${KIPRJMOD}/cyberec.pretty")(options "")(descr ""))
+)

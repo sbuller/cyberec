@@ -1,0 +1,262 @@
+(footprint "CAP-SMD_BD10.0-L10.3-W10.3-FD"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -4 180)
+		(layer "F.SilkS")
+		(uuid "0b7b9798-12c9-4575-961c-fb4ebe820e78")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" ""
+		(at 0 4 180)
+		(layer "F.Fab")
+		(uuid "d3d984e5-52d8-49bf-ba14-364fa4b07d85")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://lcsc.com/datasheet/lcsc_datasheet_2304140030_Ymin-VKME2102C820MV_C487475.pdf"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "bf6b8336-90c2-4e2f-9a8f-a63e31465a01")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b21b3705-e0d5-4543-978b-7637c9878035")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "checksum" "23a229dd119eabeeaf379c01e4ce691f154293f4f0051b0c651b4af3d7aa0148"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "ffcba197-5625-498f-9e1c-44698a2d4fa5")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "__atopile_lib_fp_hash__" "b8b2654d-c6f8-2900-7a74-7eb5f5c8f5e0"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "537c3de2-589e-42b7-a25d-948b335be3ef")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "LCSC" "C487475"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "bb62a288-ab10-4aa2-bc5d-d934c8423d84")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "Manufacturer" "Ymin"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "bedb101f-e073-49c2-ad57-4a4f5d6295d9")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "Partnumber" "VKME2102C820MV"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "efaaeb2f-9224-406a-a045-0e2262ff6631")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "atopile_address" "charger.c_sys_2.package"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "a01a9a2c-fe8d-44cb-a1e7-92931b4d93f0")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -5.23 -3.09)
+		(end -5.23 -0.85)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "4b1aeb77-bb7d-41aa-b315-413e32abb42e")
+	)
+	(fp_line
+		(start -5.23 3.09)
+		(end -5.23 0.85)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "89bc3f0d-5267-44e0-a1ff-709e41c8404c")
+	)
+	(fp_line
+		(start -3.09 -5.23)
+		(end -5.23 -3.09)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "59665008-f0cc-4608-8768-ef0bf7a8b13b")
+	)
+	(fp_line
+		(start -3.09 5.23)
+		(end -5.23 3.09)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "fcfc79f4-700b-4d37-9a05-b294d2ee2937")
+	)
+	(fp_line
+		(start 5.23 -5.23)
+		(end -3.09 -5.23)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "82cbb1a4-3595-4180-91fc-2e8fb38383a0")
+	)
+	(fp_line
+		(start 5.23 -0.85)
+		(end 5.23 -5.23)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "1ba104d6-0464-46b0-96ec-937ce3cf40d5")
+	)
+	(fp_line
+		(start 5.23 0.85)
+		(end 5.23 5.23)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "9e529cc4-07f5-4ebd-b412-54c6ff54da38")
+	)
+	(fp_line
+		(start 5.23 5.23)
+		(end -3.09 5.23)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "7756e1b3-086d-464e-b737-83a614bd957d")
+	)
+	(fp_circle
+		(center -5.8 5.15)
+		(end -5.77 5.15)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "41f0581e-c40e-442a-bfb8-d4b178b1e1e3")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -4 180)
+		(layer "F.SilkS")
+		(uuid "92394076-f89a-412e-8444-fa7140dd9b39")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(uuid "83a162da-bbd8-4596-9143-29b333a999aa")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -4.5 0)
+		(size 4.5 1.65)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f7159337-b21f-4a5c-aed7-4fcbff819bae")
+	)
+	(pad "2" smd rect
+		(at 4.5 0)
+		(size 4.5 1.65)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "ddcc425e-89ea-4f66-a9fa-2d6e702542a3")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../parts/Ymin_VKME2102C820MV/CAP-SMD_BD10.0-L10.3-W10.3-FD.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 180)
+		)
+	)
+)

@@ -1,0 +1,242 @@
+(footprint "IND-SMD_L11.0-W10.5_SL1050-330M"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -4 270)
+		(layer "F.SilkS")
+		(uuid "a3b24c8c-734a-4872-aac5-b465f629742e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" ""
+		(at 0 4 270)
+		(layer "F.Fab")
+		(uuid "6b885697-e5e4-4fa4-892d-c8b243a0feec")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2406141138_TECHFUSE-SL1050-100M_C22463843.pdf"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "d73fc229-d162-4fa5-8998-1afb0a988a9a")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "af3949ea-45b1-49e3-8417-c411e9c07415")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "checksum" "29701ab80cc4f944ebd31b909bf3c6f434eed751fab3e1deaaa738a8734bf573"
+		(at 0 0 270)
+		(layer "User.9")
+		(hide yes)
+		(uuid "fb1069d9-6b7b-48c9-84fe-c75ac832269e")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "__atopile_lib_fp_hash__" "b210301c-8123-0b76-22ca-237c8d7965b4"
+		(at 0 0 270)
+		(layer "User.9")
+		(hide yes)
+		(uuid "579b6258-3879-4bdb-9269-2c60ce0c82fa")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "LCSC" "C22463843"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "ba144c53-72e2-415b-bd1e-bbaf6bf1448b")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "Manufacturer" "TECHFUSE"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "5b11883a-b241-45af-8654-f5fbd9ec4579")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "Partnumber" "SL1050-100M"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "4fe22f17-20b1-4b60-bd88-ff63db4fb592")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "atopile_address" "charger.l"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "02b5229d-b499-48b0-9c7e-a1b005268c63")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_line
+		(start -5.5 -5.25)
+		(end 5.5 -5.25)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2ff56986-6f48-4712-9c88-5f4197e75669")
+	)
+	(fp_line
+		(start -5.5 -2.23)
+		(end -5.5 -5.25)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "b6118e04-9644-44ba-a834-ac95f6088b66")
+	)
+	(fp_line
+		(start -5.5 5.25)
+		(end -5.5 2.23)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "2ae0ab09-0871-419c-a11a-4898ad0e665a")
+	)
+	(fp_line
+		(start 5.5 -5.25)
+		(end 5.5 -2.23)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "50198231-e17e-4ced-a5ff-90cb41c4cfd8")
+	)
+	(fp_line
+		(start 5.5 2.23)
+		(end 5.5 5.25)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "cb6cb537-e491-4a3c-bf3a-d5f55a3dcadb")
+	)
+	(fp_line
+		(start 5.5 5.25)
+		(end -5.5 5.25)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "0cbe3863-0bda-4efe-b24c-f6033ebf6d6a")
+	)
+	(fp_circle
+		(center -5.5 5.25)
+		(end -5.47 5.25)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "18c26e87-f2b9-4957-8f58-a7ba9c296b8f")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -4 270)
+		(layer "F.SilkS")
+		(uuid "916ed94e-5aa7-41b7-8063-9f2b29e3410f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 270)
+		(layer "F.Fab")
+		(uuid "169ba0d4-6626-46a0-9d0d-3f850905c1f9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -4.62 0)
+		(size 3.25 4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "08ec4168-f848-47b4-9ce4-f6d9281e34c9")
+	)
+	(pad "2" smd rect
+		(at 4.62 0)
+		(size 3.25 4)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "8528ec02-f3db-4f44-a442-190a03442cb3")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../parts/TECHFUSE_SL1050_100M/IND-SMD_L11.0-W10.5_SL1050-330M.STEP"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

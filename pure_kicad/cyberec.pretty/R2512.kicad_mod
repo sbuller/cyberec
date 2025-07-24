@@ -1,0 +1,278 @@
+(footprint "R2512"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 0 -4 180)
+		(layer "F.SilkS")
+		(uuid "3071004e-ddf0-446c-864b-5a027ec13986")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "5mΩ ±1% 2W"
+		(at 0 4 180)
+		(layer "F.Fab")
+		(uuid "5617d48a-a6ee-48c3-9d78-943d7e97068f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_TA-I-Tech-RLM25FEER005_C185817.pdf"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "ebf8eecb-d004-416a-a393-9fa6848f5336")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "778adb8e-abc4-480c-b6a2-029cabc1fcc5")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "checksum" "81d86ea42f6e768d797f8b2f21bdeef2cf104a8bca5f9e4ba79332c3a6d04e75"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "77c42a6f-8b01-4d10-a639-9366cb2f31f1")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "__atopile_lib_fp_hash__" "94161577-99ae-0b10-a5bc-bf9939411f9f"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "6fe1c0b7-d099-4615-a513-b670122c26f4")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "LCSC" "C185817"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "d11d9c27-e327-43b5-b564-11b234c86013")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "Manufacturer" "TA-I Tech"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "3f43f447-8721-448f-996e-84ddbb1fe41c")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "Partnumber" "RLM25FEER005"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "2630cdfd-5040-4139-b3f7-a3a29e994ec4")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "PARAM_max_power" "{\"type\": \"Quantity_Set_Discrete\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 2.0, \"max\": 2.0}}]}}, \"unit\": \"watt\"}}"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "8bf19844-1c1e-43cd-89ad-80a52bb1c881")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "PARAM_max_voltage" "{\"type\": \"Quantity_Interval_Disjoint\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 0.0, \"max\": null}}]}}, \"unit\": \"volt\"}}"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "3df7cf24-2f78-4d49-a0e0-115e4e85e2c1")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "PARAM_resistance" "{\"type\": \"Quantity_Interval_Disjoint\", \"data\": {\"intervals\": {\"type\": \"Numeric_Interval_Disjoint\", \"data\": {\"intervals\": [{\"type\": \"Numeric_Interval\", \"data\": {\"min\": 0.004950000001118, \"max\": 0.005049999998882}}]}}, \"unit\": \"ohm\"}}"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "153cbcd6-26f5-473f-b071-e59aba01ac07")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(property "atopile_address" "charger.sense_bus.r_sense"
+		(at 0 0 180)
+		(layer "User.9")
+		(hide yes)
+		(uuid "d9232811-69ed-4b19-b4ba-389ebec77c52")
+		(effects
+			(font
+				(size 0.125 0.125)
+				(thickness 0.01875)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -3.94 -1.96)
+		(end -2.5 -1.96)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "69c6f15a-07f3-4145-8262-7c0c385f0909")
+	)
+	(fp_line
+		(start -3.94 1.96)
+		(end -3.94 -1.96)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6354ed32-8cef-48b6-bfa1-4b24617ea172")
+	)
+	(fp_line
+		(start -2.5 1.96)
+		(end -3.94 1.96)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "6a2f7ce5-f8b1-4deb-b4e2-aead28227ed5")
+	)
+	(fp_line
+		(start 2.5 1.96)
+		(end 3.94 1.96)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "496bd1e0-ebe0-4f22-8f1b-3d7543009d7e")
+	)
+	(fp_line
+		(start 3.94 -1.96)
+		(end 2.5 -1.96)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c690ecde-3284-4737-b297-f0bbd2b6e615")
+	)
+	(fp_line
+		(start 3.94 1.96)
+		(end 3.94 -1.96)
+		(stroke
+			(width 0.15)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "ef811033-8504-4829-81c1-5fe836eabafd")
+	)
+	(fp_circle
+		(center -3.18 1.6)
+		(end -3.15 1.6)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.Fab")
+		(uuid "a1f79695-1d3e-4fa4-a2a5-40e6322e3096")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -4 180)
+		(layer "F.SilkS")
+		(uuid "2917ebb3-5432-4b2f-bbca-7dc3ab5f24d1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(uuid "f696202e-b844-42a7-b10a-f681c770be5c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -3.07 0)
+		(size 1.28 3.46)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "7075af6a-c0b7-4ee0-a606-ceffdfcc34b3")
+	)
+	(pad "2" smd rect
+		(at 3.07 0)
+		(size 1.28 3.46)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "157587b3-84bb-4f2a-81db-f7458a24bc5b")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/../../parts/TA_I_Tech_RLM25FEER005/R2512_L6.3-W3.2-H0.6.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)
