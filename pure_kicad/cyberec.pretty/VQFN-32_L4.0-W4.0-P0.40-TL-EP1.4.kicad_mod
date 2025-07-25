@@ -14,7 +14,7 @@
 			)
 		)
 	)
-	(property "Value" ""
+	(property "Value" "Val**"
 		(at 0 6.06 0)
 		(layer "F.Fab")
 		(uuid "a1cc02bd-a397-4312-aa53-0c99295ea3fe")
@@ -124,64 +124,14 @@
 	(clearance 0.15)
 	(attr smd)
 	(fp_line
-		(start 2.19 2.2)
-		(end 2.19 1.83)
+		(start -2.2 -2.2)
+		(end -1.84 -2.2)
 		(stroke
 			(width 0.2)
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "66d7abb5-46b5-4638-8884-a80cc5fb5dc8")
-	)
-	(fp_line
-		(start 2.19 -1.83)
-		(end 2.19 -2.2)
-		(stroke
-			(width 0.2)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "188ea33e-2dc7-428d-8d74-b53b2fe1717a")
-	)
-	(fp_line
-		(start 2.19 -2.2)
-		(end 1.83 -2.2)
-		(stroke
-			(width 0.2)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "54c69edf-bf70-416a-8389-041a1119f4e1")
-	)
-	(fp_line
-		(start 1.83 2.2)
-		(end 2.19 2.2)
-		(stroke
-			(width 0.2)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "aba6ab28-1d3d-4fd3-8e7c-a0fad4e2d1f5")
-	)
-	(fp_line
-		(start -1.84 2.2)
-		(end -2.2 2.2)
-		(stroke
-			(width 0.2)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "c0c5e790-f843-49bf-b8c5-be0b46335fe8")
-	)
-	(fp_line
-		(start -2.2 2.2)
-		(end -2.2 1.83)
-		(stroke
-			(width 0.2)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "5b422c8e-8a7f-4b01-9552-beec5fc9db00")
+		(uuid "186b6fc1-880a-4e4b-9152-5f2804a7108c")
 	)
 	(fp_line
 		(start -2.2 -1.83)
@@ -194,14 +144,64 @@
 		(uuid "cf863aef-4a51-4810-8b7e-9f3325ffa458")
 	)
 	(fp_line
-		(start -2.2 -2.2)
-		(end -1.84 -2.2)
+		(start -2.2 2.2)
+		(end -2.2 1.83)
 		(stroke
 			(width 0.2)
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "186b6fc1-880a-4e4b-9152-5f2804a7108c")
+		(uuid "5b422c8e-8a7f-4b01-9552-beec5fc9db00")
+	)
+	(fp_line
+		(start -1.84 2.2)
+		(end -2.2 2.2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "c0c5e790-f843-49bf-b8c5-be0b46335fe8")
+	)
+	(fp_line
+		(start 1.83 2.2)
+		(end 2.19 2.2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "aba6ab28-1d3d-4fd3-8e7c-a0fad4e2d1f5")
+	)
+	(fp_line
+		(start 2.19 -2.2)
+		(end 1.83 -2.2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "54c69edf-bf70-416a-8389-041a1119f4e1")
+	)
+	(fp_line
+		(start 2.19 -1.83)
+		(end 2.19 -2.2)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "188ea33e-2dc7-428d-8d74-b53b2fe1717a")
+	)
+	(fp_line
+		(start 2.19 2.2)
+		(end 2.19 1.83)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "66d7abb5-46b5-4638-8884-a80cc5fb5dc8")
 	)
 	(fp_circle
 		(center -2.5 -1.77)
@@ -457,7 +457,7 @@
 		(uuid "c5ca8266-ebc7-49e2-8d7d-80bdff0ead74")
 	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../../parts/Texas_Instruments_BQ40Z80RSMR/VQFN-32_L4.0-W4.0-P0.40-TL-EP1.4.STEP"
+	(model "${KIPRJMOD}/3d/VQFN-32_L4.0-W4.0-P0.40-TL-EP1.4.STEP"
 		(offset
 			(xyz 0 0 0)
 		)

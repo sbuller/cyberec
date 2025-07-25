@@ -14,7 +14,7 @@
 			)
 		)
 	)
-	(property "Value" ""
+	(property "Value" "Val**"
 		(at 0 5.5 0)
 		(layer "F.Fab")
 		(uuid "ed267faf-f9a7-4e90-9129-c0bcab8f0d1c")
@@ -215,56 +215,56 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "7d2cf433-2791-4578-a728-518d0912bf3c")
 	)
-	(pad "2" smd rect
+	(pad "1" smd rect
 		(at -0.32 1.5 180)
 		(size 0.4 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "6abac83e-112a-4882-9bb9-bfde21c92f9c")
 	)
-	(pad "3" smd rect
+	(pad "1" smd rect
 		(at 0.33 1.5 180)
 		(size 0.4 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "21af5a70-f7da-4854-be5b-c0fa93566d21")
 	)
-	(pad "4" smd rect
+	(pad "2" smd rect
 		(at 0.98 1.5 180)
 		(size 0.4 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "23db28dd-262b-41e9-96bb-5ae865b83644")
 	)
-	(pad "5" smd rect
-		(at 0.98 -1.5 180)
-		(size 0.4 0.8)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "916b26db-614b-40eb-8ef9-95d5becf4ca8")
-	)
-	(pad "6" smd rect
-		(at 0.33 -1.5 180)
-		(size 0.4 0.8)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "2a09be43-c631-4a09-9aa7-4e3bd3ebf596")
-	)
-	(pad "7" smd rect
-		(at -0.33 -1.5 180)
-		(size 0.4 0.8)
-		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "326c27a2-cdd0-4cba-83e6-3325553d1281")
-	)
-	(pad "8" smd rect
+	(pad "3" smd rect
 		(at -0.98 -1.5 180)
 		(size 0.4 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "c2d32742-e421-4672-b248-85dbf7b0957f")
 	)
-	(pad "9" smd rect
+	(pad "3" smd rect
+		(at -0.33 -1.5 180)
+		(size 0.4 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "326c27a2-cdd0-4cba-83e6-3325553d1281")
+	)
+	(pad "3" smd rect
 		(at 0 -0.35)
 		(size 2.45 2)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "8de57541-60ac-4a75-8792-0e96cf804edc")
 	)
+	(pad "3" smd rect
+		(at 0.33 -1.5 180)
+		(size 0.4 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "2a09be43-c631-4a09-9aa7-4e3bd3ebf596")
+	)
+	(pad "3" smd rect
+		(at 0.98 -1.5 180)
+		(size 0.4 0.8)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "916b26db-614b-40eb-8ef9-95d5becf4ca8")
+	)
 	(embedded_fonts no)
-	(model "${KIPRJMOD}/../../parts/XNRUSEMI_XR15P06D/DFN-8_L3.0-W3.0-P0.65-BL-4.step"
+	(model "${KIPRJMOD}/3d/WDFN-5_L3.3-W3.3-P0.65-BL.step"
 		(offset
 			(xyz 0 0 0)
 		)
