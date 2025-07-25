@@ -176,6 +176,17 @@
 		(layer "Cmts.User")
 		(uuid "46c3a3fa-e0e6-451c-bb0c-0ae504eb3033")
 	)
+	(fp_rect
+		(start -1.7 -1.8)
+		(end 1.7 1.8)
+		(stroke
+			(width 0.05)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "e3256eda-3f8d-4814-9c8f-60269e86cd24")
+	)
 	(fp_circle
 		(center -1.5 1.6)
 		(end -1.47 1.6)
@@ -233,6 +244,13 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "23db28dd-262b-41e9-96bb-5ae865b83644")
 	)
+	(pad "3" smd oval
+		(at -1.3 0)
+		(size 1 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "d81c45a2-3d81-4661-b4cb-0f1e78ffd2bf")
+	)
 	(pad "3" smd rect
 		(at -0.98 -1.5 180)
 		(size 0.4 0.8)
@@ -263,16 +281,23 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "916b26db-614b-40eb-8ef9-95d5becf4ca8")
 	)
+	(pad "3" smd oval
+		(at 1.3 0)
+		(size 1 0.3)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(thermal_bridge_angle 45)
+		(uuid "b682ca4d-8ec8-4349-865f-8abfd3b4f488")
+	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d/WDFN-5_L3.3-W3.3-P0.65-BL.step"
 		(offset
-			(xyz 0 0 0)
+			(xyz 0 0 0.16)
 		)
 		(scale
 			(xyz 1 1 1)
 		)
 		(rotate
-			(xyz 0 0 0)
+			(xyz -0 -0 -0)
 		)
 	)
 )

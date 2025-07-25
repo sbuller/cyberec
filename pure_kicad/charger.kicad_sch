@@ -5222,7 +5222,7 @@
 				)
 			)
 		)
-		(property "Value" "D_Schottky"
+		(property "Value" "PMEG2010BELD"
 			(at 100.6475 46.99 0)
 			(effects
 				(font
@@ -5231,7 +5231,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "cyberec:D_SMA_Handsoldering"
+		(property "Footprint" "cyberec:D_SOD-882D"
 			(at 100.33 50.8 0)
 			(effects
 				(font
@@ -9094,7 +9094,7 @@
 				)
 			)
 		)
-		(property "Value" "D_Schottky"
+		(property "Value" "PMEG2010BELD"
 			(at 180.0225 46.99 0)
 			(effects
 				(font
@@ -9103,7 +9103,7 @@
 				(hide yes)
 			)
 		)
-		(property "Footprint" "cyberec:D_SMA_Handsoldering"
+		(property "Footprint" "cyberec:D_SOD-882D"
 			(at 180.34 50.8 0)
 			(effects
 				(font
