@@ -537,6 +537,10 @@
       {
         "netclass": "Default",
         "pattern": "*"
+      },
+      {
+        "netclass": "PWR",
+        "pattern": "*/SW*"
       }
     ]
   },

@@ -197,18 +197,6 @@
 		(layer "F.Fab")
 		(uuid "ae169835-2dbf-4693-8b15-bc50eaf63557")
 	)
-	(fp_text user "Designator9"
-		(at -2.8448 -3.3274 0)
-		(unlocked yes)
-		(layer "F.SilkS")
-		(uuid "17268a38-ddda-4733-9e09-d3571bf9588c")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-		)
-	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(unlocked yes)

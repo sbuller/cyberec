@@ -52,6 +52,7 @@
 			)
 		)
 	)
+	(clearance 0.15)
 	(attr smd)
 	(fp_line
 		(start -2.6797 -3.175)

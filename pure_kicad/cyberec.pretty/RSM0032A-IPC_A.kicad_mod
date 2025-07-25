@@ -52,6 +52,7 @@
 			)
 		)
 	)
+	(clearance 0.15)
 	(attr smd)
 	(fp_line
 		(start -2.000001 -2.000001)
@@ -195,18 +196,6 @@
 		)
 		(layer "F.Fab")
 		(uuid "f88d915c-984f-4be8-bd89-87d9284e64c8")
-	)
-	(fp_text user "Designator9"
-		(at -3.302 -3.9878 0)
-		(unlocked yes)
-		(layer "F.SilkS")
-		(uuid "b025c8f4-86f0-4a08-8122-283797d811ef")
-		(effects
-			(font
-				(size 1 1)
-				(thickness 0.15)
-			)
-		)
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
