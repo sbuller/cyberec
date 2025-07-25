@@ -542,6 +542,14 @@
       {
         "netclass": "PWR",
         "pattern": "*/SW*"
+      },
+      {
+        "netclass": "PWR",
+        "pattern": "*BTST*"
+      },
+      {
+        "netclass": "PWR",
+        "pattern": "*REGN"
       }
     ]
   },

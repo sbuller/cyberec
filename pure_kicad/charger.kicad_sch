@@ -6179,7 +6179,7 @@
 				)
 			)
 		)
-		(property "Value" "XT60M"
+		(property "Value" "XT30M"
 			(at 37.465 30.48 0)
 			(effects
 				(font
@@ -6187,7 +6187,7 @@
 				)
 			)
 		)
-		(property "Footprint" "cyberec:AMASS_XT60-M_1x02_P7.20mm_Vertical"
+		(property "Footprint" "cyberec:AMASS_XT30U-M_1x02_P5.0mm_Vertical"
 			(at 36.83 33.02 0)
 			(effects
 				(font
@@ -9883,7 +9883,7 @@
 				)
 			)
 		)
-		(property "Value" "XT60M"
+		(property "Value" "XT30F"
 			(at 43.815 162.56 0)
 			(effects
 				(font
@@ -9891,7 +9891,7 @@
 				)
 			)
 		)
-		(property "Footprint" "cyberec:AMASS_XT60-M_1x02_P7.20mm_Vertical"
+		(property "Footprint" "cyberec:AMASS_XT30U-F_1x02_P5.0mm_Vertical"
 			(at 43.18 165.1 0)
 			(effects
 				(font
