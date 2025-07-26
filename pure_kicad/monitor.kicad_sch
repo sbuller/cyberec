@@ -5222,6 +5222,16 @@
 		)
 		(uuid "147dd58d-ad6d-4b42-8b14-63c0378c5233")
 	)
+	(label "cell3"
+		(at 35.56 111.76 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "198c0723-6d35-466c-bf17-e18a5ff34f3a")
+	)
 	(label "LED_B"
 		(at 200.66 121.92 0)
 		(effects
@@ -5262,6 +5272,16 @@
 		)
 		(uuid "3948c9b7-a8dd-4ed5-a469-82ea74175527")
 	)
+	(label "cell6"
+		(at 35.56 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "48dabcf5-c83f-450a-a22d-d3865b90772f")
+	)
 	(label "LED_C"
 		(at 95.25 179.07 180)
 		(effects
@@ -5281,6 +5301,16 @@
 			(justify left bottom)
 		)
 		(uuid "66c7e4fc-7921-47ad-9c50-ffad3258edc6")
+	)
+	(label "cell1"
+		(at 35.56 127 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7c9b352d-11d0-4eb6-b543-e653b8c843b5")
 	)
 	(label "LED_B"
 		(at 95.25 171.45 180)
@@ -5302,6 +5332,16 @@
 		)
 		(uuid "83c13588-8dc7-40d6-9916-f9d5aff9f990")
 	)
+	(label "cell5"
+		(at 35.56 106.68 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "8a8ce52c-e4c3-49f1-bff3-53ab1fdb156c")
+	)
 	(label "DSG"
 		(at 200.66 93.98 0)
 		(effects
@@ -5311,6 +5351,16 @@
 			(justify left bottom)
 		)
 		(uuid "8ded339b-806e-486a-a2df-6aa6003b1b5e")
+	)
+	(label "cell6"
+		(at 228.6 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "92eee07b-03a7-47fa-a209-ec080df7203f")
 	)
 	(label "SRP"
 		(at 124.46 101.6 180)
@@ -5332,6 +5382,16 @@
 		)
 		(uuid "a17d5386-7c9d-4eba-8f54-aeb2abcf175f")
 	)
+	(label "cell2"
+		(at 35.56 124.46 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "baa2f0a8-5dbd-4952-af45-4b4242d2c2cc")
+	)
 	(label "SRN"
 		(at 124.46 106.68 180)
 		(effects
@@ -5351,6 +5411,16 @@
 			(justify left bottom)
 		)
 		(uuid "cec637e2-7683-48c1-b4d3-4def5312c40b")
+	)
+	(label "cell4"
+		(at 35.56 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fbc4190b-1846-4f9b-9449-355887598c1d")
 	)
 	(global_label "TS_PACK2"
 		(shape input)
@@ -6204,72 +6274,6 @@
 			(project "cyberec"
 				(path "/40353889-c50f-4e31-a1c9-0677743efa04/8b99ca33-10b1-4de7-aaf1-12ec8d8c3fec"
 					(reference "C34")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+BATT")
-		(at 228.6 71.12 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "33827580-373b-4c14-a699-bea82eda3df2")
-		(property "Reference" "#PWR056"
-			(at 228.6 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+BATT"
-			(at 228.6 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 228.6 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 228.6 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+BATT\""
-			(at 228.6 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f19c2883-2374-4023-9b03-671379d29b7c")
-		)
-		(instances
-			(project "cyberec"
-				(path "/40353889-c50f-4e31-a1c9-0677743efa04/8b99ca33-10b1-4de7-aaf1-12ec8d8c3fec"
-					(reference "#PWR056")
 					(unit 1)
 				)
 			)
