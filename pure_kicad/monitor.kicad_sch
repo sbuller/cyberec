@@ -6213,16 +6213,16 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
-		(at 217.17 99.06 90)
+		(at 217.17 99.06 270)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "2e3c12ad-b9b4-4ab1-b6e9-db693f28c09d")
 		(property "Reference" "C34"
-			(at 217.1763 92.71 90)
+			(at 217.1637 92.71 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6230,7 +6230,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 217.1763 95.25 90)
+			(at 217.1637 95.25 90)
 			(effects
 				(font
 					(size 1.27 1.27)
