@@ -6627,6 +6627,16 @@
 		)
 		(uuid "d78a6c8d-f17e-4b04-a208-98a8a114063a")
 	)
+	(label "VAC_DAMP"
+		(at 208.28 25.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d97ba916-71fb-4ae5-8105-4869075bd7dd")
+	)
 	(label "ACN"
 		(at 49.53 87.63 0)
 		(effects

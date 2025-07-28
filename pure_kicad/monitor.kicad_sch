@@ -3664,7 +3664,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 35.56) (xy 86.36 35.56)
+			(xy 74.93 35.56) (xy 86.36 35.56)
 		)
 		(stroke
 			(width 0)
@@ -4274,7 +4274,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 35.56) (xy 74.93 35.56)
+			(xy 64.77 35.56) (xy 69.85 35.56)
 		)
 		(stroke
 			(width 0)
@@ -4664,7 +4664,7 @@
 	)
 	(wire
 		(pts
-			(xy 69.85 31.75) (xy 69.85 35.56)
+			(xy 64.77 31.75) (xy 64.77 35.56)
 		)
 		(stroke
 			(width 0)
@@ -5382,6 +5382,16 @@
 		)
 		(uuid "a17d5386-7c9d-4eba-8f54-aeb2abcf175f")
 	)
+	(label "BATT_JOIN"
+		(at 38.1 50.8 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "af738f8e-5448-4f3f-90b0-cf2abac30e01")
+	)
 	(label "cell2"
 		(at 35.56 124.46 0)
 		(effects
@@ -5411,6 +5421,16 @@
 			(justify left bottom)
 		)
 		(uuid "cec637e2-7683-48c1-b4d3-4def5312c40b")
+	)
+	(label "PCHG_R"
+		(at 77.47 35.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e6e9777b-fc1e-43ee-98ae-24f271a127a3")
 	)
 	(label "cell4"
 		(at 35.56 109.22 0)
@@ -6657,7 +6677,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Small_US")
-		(at 77.47 35.56 270)
+		(at 72.39 35.56 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -6666,7 +6686,7 @@
 		(fields_autoplaced yes)
 		(uuid "4ef5f987-1ce0-46c6-908d-d178865bdef9")
 		(property "Reference" "R22"
-			(at 77.47 29.21 90)
+			(at 72.39 29.21 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6674,7 +6694,7 @@
 			)
 		)
 		(property "Value" "1k, 500mW"
-			(at 77.47 31.75 90)
+			(at 72.39 31.75 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6682,7 +6702,7 @@
 			)
 		)
 		(property "Footprint" "cyberec:R_1210_3225Metric_Pad1.30x2.65mm_HandSolder"
-			(at 77.47 35.56 0)
+			(at 72.39 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6691,7 +6711,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 77.47 35.56 0)
+			(at 72.39 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6700,7 +6720,7 @@
 			)
 		)
 		(property "Description" "Resistor, small US symbol"
-			(at 77.47 35.56 0)
+			(at 72.39 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8548,7 +8568,7 @@
 	)
 	(symbol
 		(lib_id "power:+BATT")
-		(at 69.85 31.75 0)
+		(at 64.77 31.75 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8557,7 +8577,7 @@
 		(fields_autoplaced yes)
 		(uuid "a3246c95-9415-44cf-8b20-5d5414973ed3")
 		(property "Reference" "#PWR043"
-			(at 69.85 35.56 0)
+			(at 64.77 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8566,7 +8586,7 @@
 			)
 		)
 		(property "Value" "+BATT"
-			(at 69.85 26.67 0)
+			(at 64.77 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8574,7 +8594,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 69.85 31.75 0)
+			(at 64.77 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8583,7 +8603,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 69.85 31.75 0)
+			(at 64.77 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8592,7 +8612,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+BATT\""
-			(at 69.85 31.75 0)
+			(at 64.77 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
