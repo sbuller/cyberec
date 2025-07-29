@@ -9104,16 +9104,16 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Pin")
-		(at 36.83 33.02 0)
+		(at 36.83 35.56 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "415af812-09fb-40ab-9216-a20d94c7c18a")
 		(property "Reference" "J1"
-			(at 37.465 27.94 0)
+			(at 37.465 40.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9121,7 +9121,7 @@
 			)
 		)
 		(property "Value" "XT30M"
-			(at 37.465 30.48 0)
+			(at 37.465 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9129,7 +9129,7 @@
 			)
 		)
 		(property "Footprint" "cyberec:AMASS_XT30U-M_1x02_P5.0mm_Vertical"
-			(at 36.83 33.02 0)
+			(at 36.83 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9138,7 +9138,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 36.83 33.02 0)
+			(at 36.83 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9147,7 +9147,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 36.83 33.02 0)
+			(at 36.83 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15335,16 +15335,16 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x02_Pin")
-		(at 43.18 165.1 0)
+		(at 43.18 167.64 0)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "e810f70c-46a3-42c6-99de-a6e2036f63e3")
 		(property "Reference" "J2"
-			(at 43.815 160.02 0)
+			(at 43.815 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15352,7 +15352,7 @@
 			)
 		)
 		(property "Value" "XT30F"
-			(at 43.815 162.56 0)
+			(at 43.815 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15360,7 +15360,7 @@
 			)
 		)
 		(property "Footprint" "cyberec:AMASS_XT30U-F_1x02_P5.0mm_Vertical"
-			(at 43.18 165.1 0)
+			(at 43.18 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15369,7 +15369,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 43.18 165.1 0)
+			(at 43.18 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15378,7 +15378,7 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 43.18 165.1 0)
+			(at 43.18 167.64 0)
 			(effects
 				(font
 					(size 1.27 1.27)
